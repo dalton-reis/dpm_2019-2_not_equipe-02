@@ -149,7 +149,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 151.9, y: -60}
+  m_AnchoredPosition: {x: 151.90002, y: -60}
   m_SizeDelta: {x: 84, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &54821779
@@ -265,8 +265,9 @@ GameObject:
   - component: {fileID: 513878645}
   - component: {fileID: 513878649}
   - component: {fileID: 513878648}
-  - component: {fileID: 513878647}
   - component: {fileID: 513878650}
+  - component: {fileID: 513878646}
+  - component: {fileID: 513878647}
   m_Layer: 5
   m_Name: PlantInAJar Image
   m_TagString: Untagged
@@ -293,6 +294,28 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -192}
   m_SizeDelta: {x: 215.4, y: 215.4}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &513878646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 513878644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d392c4c1f48385a4db03a96e19420b74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates: []
+  delegates: []
+  dragging: 0
+  screenBounds: {x: 0, y: 0}
+  objectWidth: 0
+  objectHeight: 0
 --- !u!50 &513878647
 Rigidbody2D:
   serializedVersion: 4
@@ -305,15 +328,15 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 100
+  m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 50
+  m_GravityScale: 100
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &513878648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -536,7 +559,7 @@ GameObject:
   - component: {fileID: 846786798}
   m_Layer: 5
   m_Name: Floor Image
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -748,7 +771,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
+  orthographic: 1
   orthographic size: 5
   m_Depth: -1
   m_CullingMask:
@@ -773,7 +796,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 914881254}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: 1920, y: 1080, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -847,7 +870,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 914881256}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1

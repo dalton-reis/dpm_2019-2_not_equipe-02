@@ -7,8 +7,8 @@ public class DragAndDrop : EventTrigger {
     private bool dragging;
 
     private Vector2 screenBounds;
-    private float objectWidth = 80;
-    private float objectHeight = 100;
+    private const float objectWidth = 80;
+    private const float objectHeight = 100;
 
     void Start() {
         // Image img = GetComponent<Image>();
@@ -20,12 +20,15 @@ public class DragAndDrop : EventTrigger {
     }
 
     void Update() {
-        if (dragging) {
-            Vector3 viewPos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
-            viewPos.x = Mathf.Clamp(viewPos.x, 0+objectWidth, screenBounds.x-objectWidth);
-            viewPos.y = Mathf.Clamp(viewPos.y, 0+objectHeight, screenBounds.y-objectHeight);
-            transform.position = viewPos;  
-        }
+        if(dragging) 
+             UpdateCurrentPosition();
+    }
+
+    private void UpdateCurrentPosition() {
+        Vector3 viewPos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+        viewPos.x = Mathf.Clamp(viewPos.x, 0+objectWidth, screenBounds.x-objectWidth);
+        viewPos.y = Mathf.Clamp(viewPos.y, 0+objectHeight, screenBounds.y-objectHeight);
+        transform.position = viewPos; 
     }
 
     public override void OnPointerDown(PointerEventData eventData) {

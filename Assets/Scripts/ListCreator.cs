@@ -11,7 +11,7 @@ public class ListCreator : MonoBehaviour {
 
 	void Start () {
         itemHeight = item.GetComponent<RectTransform>().rect.height;
-        plants = GameObject.FindObjectOfType<GameManager>().GetPlants();
+        plants = GameObject.FindObjectOfType<GameManager>().Plants;
 
         content.sizeDelta = new Vector2(0, plants.Length * itemHeight);
 
@@ -28,6 +28,11 @@ public class ListCreator : MonoBehaviour {
             
             itemDetails.text.text = plants[i].GetComponent<PlantModel>().PlantName;
             itemDetails.image.sprite = plants[i].GetComponent<PlantModel>().Image;
+            
+            itemDetails.image.GetComponent<RectTransform>().sizeDelta = new Vector2(
+                plants[i].GetComponent<PlantModel>().Width / 2,
+                plants[i].GetComponent<PlantModel>().Height / 2
+            );
         }
 	}
 }

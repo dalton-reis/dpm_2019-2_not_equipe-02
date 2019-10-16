@@ -10,5 +10,9 @@ public class SceneLoader : MonoBehaviour {
     public void LoadByIndex(int sceneIndex) {
         SceneManager.LoadScene(sceneIndex);
     }
+
+    public void Quit() {
+        Application.Quit();
+    }
     
 }

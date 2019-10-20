@@ -1,20 +1,15 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
     
-    [SerializeField] private GameObject[] plants;
-    private List<GameObject> activePlants = new List<GameObject>();
-    public List<GameObject> ActivePlants { get => activePlants; }
-
-    public GameObject[] Plants { get => plants; }
-
+    [SerializeField] private Image background;
+    [SerializeField] private Text title;
 
     void Start() {
-        
+        BiomaController bioma = FindObjectOfType<BiomaController>();
+        background.sprite = bioma.Image;
+        title.text = bioma.Name;
     }
 
-    void Update() {
-        
-    }
 }

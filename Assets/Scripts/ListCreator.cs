@@ -1,8 +1,8 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 public class ListCreator : MonoBehaviour {
 
-    private GameObject[] plants;
     [SerializeField] private Transform spawnPoint;
     [SerializeField] private GameObject item;
     [SerializeField] private RectTransform content;
@@ -11,7 +11,7 @@ public class ListCreator : MonoBehaviour {
 
 	void Start () {
         itemHeight = item.GetComponent<RectTransform>().rect.height;
-        plants = GameObject.FindObjectOfType<GameManager>().Plants;
+        Plant[] plants = GameObject.FindObjectOfType<BiomaController>().Plants;
 
         content.sizeDelta = new Vector2(0, plants.Length * itemHeight);
 
@@ -26,12 +26,12 @@ public class ListCreator : MonoBehaviour {
 
             ItemListDetails itemDetails = spawnedItem.GetComponent<ItemListDetails>();
             
-            itemDetails.text.text = plants[i].GetComponent<PlantModel>().PlantName;
-            itemDetails.image.sprite = plants[i].GetComponent<PlantModel>().Image;
+            itemDetails.text.text = plants[i].name;
+            itemDetails.image.sprite = Resources.Load<Sprite>(plants[i].image);
             
             itemDetails.image.GetComponent<RectTransform>().sizeDelta = new Vector2(
-                plants[i].GetComponent<PlantModel>().Width / 2,
-                plants[i].GetComponent<PlantModel>().Height / 2
+                plants[i].width / 2,
+                plants[i].height / 2
             );
         }
 	}

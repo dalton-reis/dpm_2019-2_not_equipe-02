@@ -1,0 +1,85 @@
+{
+    "biomas": [
+        {
+            "name": "Caatinga",
+            "image": "images/background/caatinga",
+            "plants": [
+                {
+                    "name": "Plantinha",
+                    "description": "Uma plantinha em um vaso",
+                    "image": "images/plants/plant_in_a_jar",
+                    "width": 215,
+                    "height": 215
+                },
+                {
+                    "name": "Cactozinho",
+                    "description": "Um cactozinho feliz",
+                    "image": "images/plants/cactus",
+                    "width": 150,   
+                    "height": 215
+                },
+                {
+                    "name": "Plantinha feliz",
+                    "description": "Uma plantinha feliz",
+                    "image": "images/plants/weird_plant",
+                    "width": 150,
+                    "height": 215
+                }
+            ]
+        },
+        {
+            "name": "Cerrado",
+            "image": "images/background/cerrado",
+            "plants": [
+                {
+                    "name": "Plantinha",
+                    "description": "Uma plantinha em um vaso",
+                    "image": "images/plants/plant_in_a_jar",
+                    "width": 215,
+                    "height": 215
+                },
+                {
+                    "name": "Cactozinho",
+                    "description": "Um cactozinho feliz",
+                    "image": "images/plants/cactus",
+                    "width": 150,   
+                    "height": 215
+                },
+                {
+                    "name": "Plantinha feliz",
+                    "description": "Uma plantinha feliz",
+                    "image": "images/plants/weird_plant",
+                    "width": 150,
+                    "height": 215
+                }
+            ]
+        },
+        {
+            "name": "Amazônia",
+            "image": "images/background/amazonia",
+            "plants": [
+                {
+                    "name": "Plantinha",
+                    "description": "Uma plantinha em um vaso",
+                    "image": "images/plants/plant_in_a_jar",
+                    "width": 215,
+                    "height": 215
+                },
+                {
+                    "name": "Cactozinho",
+                    "description": "Um cactozinho feliz",
+                    "image": "images/plants/cactus",
+                    "width": 150,   
+                    "height": 215
+                },
+                {
+                    "name": "Plantinha feliz",
+                    "description": "Uma plantinha feliz",
+                    "image": "images/plants/weird_plant",
+                    "width": 150,
+                    "height": 215
+                }
+            ]
+        }
+    ]
+}

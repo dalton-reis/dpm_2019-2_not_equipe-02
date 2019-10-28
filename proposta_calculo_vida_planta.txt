@@ -1,0 +1,41 @@
+Bioma
+
+	Propriedades do bioma:
+
+		Temperatura: x ~ y | x > 0 ^ y <= 100;
+		Umidade do ar: x ~ y | x > 0 ^ y <= 100;
+	
+	Variáveis:
+	
+		Temperatura: z -> x <= z <= y
+		Umidade do ar: z -> x <= z <= y
+
+Plantas:
+
+	Propriedades da espécie:
+	
+		Humidade do solo adequada: x ~ y | x > 0 ^ y <= 100;
+		Adubamento do solo necessário: x ~ y | x > 0 ^ y <= 100;
+		Temperatura adequada: x ~ y | x > 0 ^ y <= 100;
+		Umidade do ar adequada: x ~ y | x > 0 ^ y <= 100;
+
+	Variáveis:
+	
+		Humidade do solo: 0 ~ 100;
+		Adubamento do solo 0 ~ 100 (Se colocar um adubamento de um bioma errado, decrementar valor);
+		
+Fórmula do cálculo da vida das plantas:
+
+AProp -> Proporção dos atributos com a vida máxima.
+nA -> Número de atributos
+Vm -> Vida Máxima
+Amin -> Valor mínimo do atributo
+Amax -> Valor máximo do atributo
+Adist -> Distância do valor do atributo ao Amin ou Amax |  0 <= Adist <= 100
+         Se valor do atributo está dentro do range, Adist = 0.
+		 Se o valor é abaixo do Amin, calcular distância em cima de Amin.
+		 Se o valor é acima do Amax, calcular distância em cima do Amax.
+V -> Vida atual
+
+Vm = 100nA * AProp
+V = Se Σ(Adist) > 0 ? V - Σ(Adist) : V + (nA * 100)

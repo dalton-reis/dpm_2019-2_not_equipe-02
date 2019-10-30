@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour {
     [SerializeField] private Image plantImageSprite;
     [SerializeField] private GameObject plantInfoPanel;
 
+    [SerializeField] private SimpleHealthBar healthBar;
+
     public int InstantiatedPlantsCount { 
         get => instantiatedPlantsCount; 
         set {
@@ -30,9 +32,11 @@ public class GameManager : MonoBehaviour {
     }
 
     void Start() {
-        BiomaController bioma = FindObjectOfType<BiomaController>();
-        background.sprite = bioma.Image;
-        title.text = bioma.Name;
+        BiomaController biomaController = FindObjectOfType<BiomaController>();
+        background.sprite = biomaController.Image;
+        title.text = biomaController.Name;
+
+        healthBar.UpdateBar(biomaController.Temperature, 50);
     }
 
     public void ShowPlantSpawns(bool show) {

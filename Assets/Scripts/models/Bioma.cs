@@ -6,6 +6,7 @@ public class Bioma {
 
     public string name;
     public string image;
+    public float temperature;
     public Plant[] plants;
 
     public override string ToString() {

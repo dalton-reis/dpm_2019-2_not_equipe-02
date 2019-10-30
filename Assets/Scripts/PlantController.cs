@@ -16,7 +16,10 @@ public class PlantController : MonoBehaviour {
     public float Width { get => plant.width; }
     public float Height { get => plant.height; }
 
+    [SerializeField] private SimpleHealthBar healthBar;
+
     private const float GRAVITY_SCALE = 100f;
+    private float currentHealth;
 
     private void Start() {
         SetVisual();
@@ -26,7 +29,12 @@ public class PlantController : MonoBehaviour {
         gameManager = GameObject.FindObjectOfType<GameManager>();
     }
 
-    private void Update() { }
+    private void FixedUpdate() { 
+        healthBar.UpdateBar(currentHealth, 100);
+        currentHealth += 8f * Time.deltaTime;
+        if(currentHealth >= 100)
+            currentHealth = 0;
+    }
 
     private void SetVisual() {
         // GetComponent<RectTransform>().localPosition = Vector2.zero;

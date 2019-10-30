@@ -189,7 +189,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 534301055248944192}
-          m_MethodName: InstantiatePlant
+          m_MethodName: SelectPlant
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}

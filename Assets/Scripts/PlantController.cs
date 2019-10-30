@@ -8,6 +8,8 @@ public class PlantController : MonoBehaviour {
     
     [HideInInspector] public Plant plant;
 
+    private GameManager gameManager;
+
     public string PlantName { get => plant.name; }
     public string Description { get => plant.description; }
     public Sprite Image { get => Resources.Load<Sprite>(plant.image); }
@@ -20,12 +22,14 @@ public class PlantController : MonoBehaviour {
         SetVisual();
         SetPhysicAttributes();
         SetName(name);
+
+        gameManager = GameObject.FindObjectOfType<GameManager>();
     }
 
     private void Update() { }
 
     private void SetVisual() {
-        GetComponent<RectTransform>().localPosition = Vector2.zero;
+        // GetComponent<RectTransform>().localPosition = Vector2.zero;
         GetComponent<RectTransform>().sizeDelta = new Vector2(Width, Height);
         GetComponent<Image>().sprite = Image;
     }
@@ -41,5 +45,9 @@ public class PlantController : MonoBehaviour {
     }
 
     public override string ToString() => plant.ToString();
+
+    public void ShowPlantInfos() {
+        gameManager.ShowPlantInfoPanel(this.plant);
+    }
 
 }

@@ -6,22 +6,33 @@
             "temperature": 35,
             "plants": [
                 {
-                    "name": "Plantinha",
-                    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+                    "name": "Malva-branca",
+                    "scientificName": "Sida cordifolia L",
+                    "description": "É um tipo de arbusto que ocorre em terrenos com solo arenoso, possui flores na cor amarela e alaranjada. O pólen e néctar são um atrativo para abelhas e para a produção de mel, sendo muito utilizada em jardins de flora melífera.",
                     "image": "images/plants/plant_in_a_jar",
                     "width": 215,
                     "height": 215
                 },
                 {
-                    "name": "Cactozinho",
-                    "description": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur",
-                    "image": "images/plants/cactus",
-                    "width": 150,   
+                    "name": "Angico",
+                    "scientificName": "Anadenanthera colubrina",
+                    "description": "Angico é uma árvore famosa por suas flores brancas que costumam atrair abelhas produtoras de mel. Angico se caracteriza por apresentar um rápido crescimento. É uma árvore com tronco robusto que produz uma alta quantidade de tanino, uma substância que evita o ataque de microrganismos que podem causar doenças. A casca do tronco do angico também apresenta propriedades medicinais, sendo indicada para reduzir sangramento, combater diarreia e ajudar na cicatrização da pele.",
+                    "image": "images/plants/weird_plant",
+                    "width": 150,
                     "height": 215
                 },
                 {
-                    "name": "Plantinha feliz",
-                    "description": "from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very",
+                    "name": "Cacto",
+                    "scientificName": "Cactaceae",
+                    "description": "Os cactos são muito comuns em ambientes secos e quente, devido à sua alta capacidade de acumular água, por isso é tão comum na Caatinga. Possui uma variedade de espécies, sendo que algumas podem chegar até a 18 m de altura. Apresentam caule suculento, formato cilíndrico e muitos espinhos, que nada mais são que as folhas que sofreram transformações para se adaptarem ao ambiente.",
+                    "image": "images/plants/cactus",
+                    "width": 150,
+                    "height": 215
+                },
+                {
+                    "name": "Bromélia",
+                    "scientificName": "Bromeliaceae",
+                    "description": "A bromélia é uma planta que pertence à família Bromeliáceas, que possuem uma infinidade de espécies. A espécie mais popular da bromélia é o abacaxi, formada a partir da reunião de várias flores. Uma das características das bromélias está nas suas folhas, que normalmente são longas, estreitas, curvas e dispostas em camadas circulares. Devido à formação das folhas, elas possuem grande capacidade de armazenar água, sendo muito consumida por diferentes espécies de animais.",
                     "image": "images/plants/weird_plant",
                     "width": 150,
                     "height": 215
@@ -34,23 +45,34 @@
             "temperature": 25,
             "plants": [
                 {
-                    "name": "Plantinha",
-                    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+                    "name": "Buriti",
+                    "scientificName": "Mauritia flexuosa",
+                    "description": "No bioma Cerrado é a espécie que caracteriza as veredas, marcante fitofisionomia da região, ocorrendo também em matas de galeria e ciliares, podendo formar densos buritizais.",
                     "image": "images/plants/plant_in_a_jar",
                     "width": 215,
                     "height": 215
                 },
                 {
-                    "name": "Cactozinho",
-                    "description": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur",
+                    "name": "Jatobá-do-cerrado",
+                    "scientificName": "Hymenaea stigonocarpa",
+                    "description": "Ocorre em cerrados e cerradões e mesmo sem flores pode ser identificada facilmente pelas suas folhas, que são alternas e compostas por dois folíolos. Outros nomes: jatobá, jatobá-do-campo, jatobá-da-serra, jatobá-capão, jatobá-de-casca-fina, jataí. Os usos medicinais registrados pela bibliografia para o jatobá-do-cerrado são no tratamento de problemas respiratórios, como expectorante, vermífugo, para dores no estômago, no peito e nas costas, pode estimular o apetite.",
                     "image": "images/plants/cactus",
-                    "width": 150,   
+                    "width": 150,
                     "height": 215
                 },
                 {
-                    "name": "Plantinha feliz",
-                    "description": "from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very",
+                    "name": "Araticum",
+                    "scientificName": "Annona crassiflora",
+                    "description": "O nome araticum é derivado do tupi, podendo significar árvore de fibra rija e dura, fruto do céu, saboroso, ou ainda fruto mole. O araticum integra a medicina das populações tradicionais da região da Chapada dos Veadeiros, Goiás, que o utilizam como regulador de menstruação, para reumatismo, feridas.",
                     "image": "images/plants/weird_plant",
+                    "width": 150,
+                    "height": 215
+                },
+                {
+                    "name": "Pequi",
+                    "scientificName": "Caryocar brasiliense",
+                    "description": "O pequizeiro é uma árvore que habita cerrados, cerradões e matas secas ao longo de todo o bioma Cerrado. Queimadas recorrentes podem manter o pequizeiro na forma de subarbusto, em campos sujos. O pequizeiro é uma árvore de múltiplos valores: ecológico, cultural, gastronômico, medicinal, econômico.",
+                    "image": "images/plants/cactus",
                     "width": 150,
                     "height": 215
                 }
@@ -62,23 +84,34 @@
             "temperature": 10,
             "plants": [
                 {
-                    "name": "Plantinha",
-                    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+                    "name": "Arnica",
+                    "scientificName": "Arnica montana",
+                    "description": "Sendo popularmente conhecida, a Arnica é uma planta medicinal muito utilizada para tratar contusões, dores reumáticas, escoriações e dores musculares. Isso se dá devido ao seu potencial anti-inflamatório, comprovadamente efetivo, para além do seu uso consagrado como cicatrizante e no combate às hemorragias.",
                     "image": "images/plants/plant_in_a_jar",
                     "width": 215,
                     "height": 215
                 },
                 {
-                    "name": "Cactozinho",
-                    "description": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur",
+                    "name": "Pau Brasil",
+                    "scientificName": "Paubrasilia echinata",
+                    "description": "Uma das mais conhecidas da história do Brasil devido ter sido a principal e mais lucrativa descoberta dos portugueses nas nossas terras. Atualmente, a árvore encontra-se quase extinta, havendo bem poucos espécimes de Pau-Brasil. A planta possui o tronco em tonalidades de cinza ou vermelho e centro avermelhado.",
                     "image": "images/plants/cactus",
-                    "width": 150,   
+                    "width": 150,
                     "height": 215
                 },
                 {
-                    "name": "Plantinha feliz",
-                    "description": "from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very",
+                    "name": "Jequitibá Rosa",
+                    "scientificName": "Cariniana legalis",
+                    "description": "O nome científico da árvore conhecida como Jequitibá Rosa ou Jequitibá Vermelho é Cariniana legalis e ela faz parte da família Lecythidaceae. Uma árvore bastante imponente que pode chegar a ter mais de 50 metros de altura e o seu diâmetro pode chegar a um metro. As suas flores são brancas e as folhas do tipo permanentes, o florescimento dessa árvore frondosa acontece nos meses de dezembro e janeiro.",
                     "image": "images/plants/weird_plant",
+                    "width": 150,
+                    "height": 215
+                },
+                {
+                    "name": "Orquídea",
+                    "scientificName": "Orchidaceae",
+                    "description": "A Orquídea é uma espécie que se destaca dentre as pessoas que gostam de flores. Diferentemente do que se pensa a Orquídea não é uma planta parasita e sim epífita, ou seja, ela se abriga sobre árvores, mas não extrai nada das mesmas. As raízes dessa planta são aéreas para que elas possam se fixar nos troncos ou galhos das árvores. As Orquídeas buscam um lugar que tenha sombra e umidade que lhes ajude a sobreviver e se desenvolver.",
+                    "image": "images/plants/cactus",
                     "width": 150,
                     "height": 215
                 }

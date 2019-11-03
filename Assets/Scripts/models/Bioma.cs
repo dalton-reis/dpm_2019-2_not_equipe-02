@@ -1,5 +1,5 @@
 ﻿using System;
-using UnityEngine;
+using System.Collections.Generic;
 
 [Serializable]
 public class Bioma {
@@ -7,15 +7,11 @@ public class Bioma {
     public string name;
     public string image;
     public float temperature;
-    public Plant[] plants;
+    public Dictionary<Attributes, AttributeRange> specs = new Dictionary<Attributes, AttributeRange>();
+    public string[] rawSpecs;
 
     public override string ToString() {
-        string content = "{name: " + name + ", image: " + image + ", plants: [";
-
-        foreach (Plant plant in plants)
-            content += plant;
-
-        return content + "]}";
+        return "{name: " + name + ", image: " + image + "]}";
     }
 
 }

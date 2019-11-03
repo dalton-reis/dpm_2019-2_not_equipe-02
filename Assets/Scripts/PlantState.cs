@@ -5,29 +5,23 @@ using UnityEngine;
 public class PlantState : MonoBehaviour
 {
 
-    private int ATTRIBUTE_PROPORTION = 10;
+    private static readonly int ATTRIBUTE_PROPORTION = 10;
 
-    public Dictionary<Attributes, AttributeRange> plantSpecs = new Dictionary<Attributes, AttributeRange>();
+    public Plant plant;
     public Dictionary<Attributes, float> plantAttributes = new Dictionary<Attributes, float>();
 
-    public float maxLife;
-    public float life;
-    public float lifeProportion;
+    private float maxLife;
+    private float life;
+    private float lifeProportion;
     
     void Start()
     {
-        // TODO Substituir pela leitura do JSON da espécie
-        plantSpecs.Add(Attributes.TEMPERATURE, new AttributeRange(0, 100));
-        plantSpecs.Add(Attributes.AIR_HUMIDITY, new AttributeRange(0, 100));
-        plantSpecs.Add(Attributes.SOIL_HUMIDITY, new AttributeRange(0, 100));
-        plantSpecs.Add(Attributes.SOIL_NUTRIENTS, new AttributeRange(0, 100));
-
         plantAttributes.Add(Attributes.SOIL_HUMIDITY, 100);
         plantAttributes.Add(Attributes.SOIL_NUTRIENTS, 100);
 
         var attributesCount = Enum.GetNames(typeof(Attributes)).Length;
-        float maxLife = 100 * attributesCount * ATTRIBUTE_PROPORTION;
-        float life = maxLife;
+        maxLife = 100 * attributesCount * ATTRIBUTE_PROPORTION;
+        life = maxLife;
     }
     
     void Update()
@@ -43,24 +37,19 @@ public class PlantState : MonoBehaviour
         {
             SetLife(lifeToUpdate);
         }
-        
+        Debug.Log(plant.name + ": " + life);
     }
 
     private float GetLifeUpdateValue()
     {
-        // TODO Obter o estado do bioma
-        BiomaState biomaState = new BiomaState();
+        BiomaState biomaState = GameObject.Find("Bioma").GetComponent<BiomaState>();
 
         float distanceCount = 0;
-        foreach (var biomaAttribute in biomaState.biomaAttributes)
-        {
-            distanceCount += plantSpecs[biomaAttribute.Key].getDistance(biomaAttribute.Value);
-        }
-        foreach (var plantAttribute in plantAttributes)
-        {
-            distanceCount += plantSpecs[plantAttribute.Key].getDistance(plantAttribute.Value);
-        }
+        distanceCount += GetDistance(biomaState.biomaAttributes);
+        distanceCount += GetDistance(plantAttributes);
+        Debug.Log("Before delta time: " + distanceCount);
         distanceCount = distanceCount * Time.deltaTime;
+        Debug.Log("After delta time: " + distanceCount);
 
         bool hasDamage = distanceCount > 0;
         if (hasDamage)
@@ -72,6 +61,18 @@ public class PlantState : MonoBehaviour
             var attributesCount = Enum.GetNames(typeof(Attributes)).Length;
             return attributesCount * 100;
         }
+    }
+
+    private float GetDistance(Dictionary<Attributes, float> specs)
+    {
+        float distanceCount = 0;
+        foreach (var attribute in specs)
+        {
+            float distance = plant.specs[attribute.Key].getDistance(attribute.Value);
+            Debug.Log(attribute.Key + ": " + plant.specs[attribute.Key] + ": value " + attribute.Value + " -> distance " + distance);
+            distanceCount += distance;
+        }
+        return distanceCount;
     }
 
     private void SetLife(float life)

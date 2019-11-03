@@ -11,7 +11,7 @@ public class ListCreator : MonoBehaviour {
 
 	void Start () {
         itemHeight = item.GetComponent<RectTransform>().rect.height;
-        Plant[] plants = GameObject.FindObjectOfType<BiomaController>().Plants;
+        Plant[] plants = GameObject.FindObjectOfType<BiomaController>().plantsList;
 
         content.sizeDelta = new Vector2(0, plants.Length * itemHeight);
 

@@ -26,5 +26,8 @@ public class AttributeRange
         }
         return value - maxValue;
     }
-
+    public override string ToString()
+    {
+        return "{minValue: " + minValue + ", maxValue: " + maxValue + "}";
+    }
 }

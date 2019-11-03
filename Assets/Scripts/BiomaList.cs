@@ -5,10 +5,12 @@ using UnityEngine.UI;
 public class BiomaList : MonoBehaviour {
 
     private Bioma[] biomas;
+    private Plant[] plants;
     public GameObject[] buttons;
 
     void Start() {
         biomas = JsonReader.LoadBiomas();
+        plants = JsonReader.LoadPlants();
 
         LoadBiomaButtons();
     }
@@ -21,10 +23,18 @@ public class BiomaList : MonoBehaviour {
     }
 
     public void LoadScene(Text name) {
-        GameObject bioma = new GameObject("Bioma");
-        BiomaController component = bioma.AddComponent<BiomaController>();
-        component.bioma = GetBiomaByName(name.text);
-        DontDestroyOnLoad(component);
+        GameObject biomaGameObject = new GameObject("Bioma");
+        Bioma bioma = GetBiomaByName(name.text);
+
+        BiomaController controller = biomaGameObject.AddComponent<BiomaController>();
+        controller.bioma = bioma;
+        controller.plantsList = plants;
+
+        BiomaState state = biomaGameObject.AddComponent<BiomaState>();
+        state.bioma = bioma;
+
+        DontDestroyOnLoad(controller);
+        DontDestroyOnLoad(state);
         SceneManager.LoadScene("Bioma");
     }
 

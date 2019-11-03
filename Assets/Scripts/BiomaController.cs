@@ -5,12 +5,12 @@ using UnityEngine.UI;
 public class BiomaController : MonoBehaviour {
 
     [HideInInspector] public Bioma bioma;
+    [HideInInspector] public Plant[] plantsList;
 
     private List<PlantController> plants = new List<PlantController>();
-
+    
     public string Name { get => bioma.name; }
     public Sprite Image { get => Resources.Load<Sprite>(bioma.image); }
-    public Plant[] Plants { get => bioma.plants; }
     public float Temperature { get => bioma.temperature; }
 
     private GameObject plantPrefab;
@@ -24,7 +24,11 @@ public class BiomaController : MonoBehaviour {
         GameObject newPlant = Instantiate(plantPrefab, position, Quaternion.identity);
         newPlant.transform.SetParent(GameObject.Find("Plants").transform);
         newPlant.name = plantToBeInstantiated;
-        newPlant.GetComponent<PlantController>().plant = FindPlantByName(plantToBeInstantiated);
+
+        Plant plant = FindPlantByName(plantToBeInstantiated);
+        newPlant.GetComponent<PlantController>().plant = plant;
+        newPlant.GetComponent<PlantState>().plant = plant;
+
         plants.Add(newPlant.GetComponent<PlantController>());
     }
 
@@ -33,7 +37,7 @@ public class BiomaController : MonoBehaviour {
     }
 
     private Plant FindPlantByName(string name) {
-        foreach (Plant plant in Plants) {
+        foreach (Plant plant in plantsList) {
             if(plant.name == name)
                 return plant;
         }

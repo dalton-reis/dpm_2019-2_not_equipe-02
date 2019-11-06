@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 6309008589752760179}
   - component: {fileID: 3882960967487814844}
   - component: {fileID: 8122029367785160103}
-  - component: {fileID: 3621346731669045629}
   - component: {fileID: 6278167562776446689}
   - component: {fileID: 114769576998543168}
   m_Layer: 9
@@ -70,6 +69,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
@@ -144,22 +145,8 @@ MonoBehaviour:
     image: 
     width: 0
     height: 0
+    rawSpecs: []
   healthBar: {fileID: 1428934601645616400}
---- !u!114 &3621346731669045629
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3621346731669045631}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d392c4c1f48385a4db03a96e19420b74, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates: []
-  delegates: []
-  dragging: 0
 --- !u!114 &6278167562776446689
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -188,6 +175,8 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   delegates: []
 --- !u!114 &114769576998543168
 MonoBehaviour:
@@ -201,9 +190,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a99d9c65c6d8e6442baf655a47e33308, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLife: 0
-  life: 0
-  lifeProportion: 0
+  plant:
+    name: 
+    description: 
+    image: 
+    width: 0
+    height: 0
+    rawSpecs: []
 --- !u!1001 &1428934601655887324
 PrefabInstance:
   m_ObjectHideFlags: 0

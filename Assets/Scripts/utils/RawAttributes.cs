@@ -12,6 +12,7 @@ public class RawAttributes
         {
             return;
         }
+        attributes.Clear();
         for (int i = 0; i < rawAttributes.Length / FIELD_COUNT; i++)
         {
             int rowIndex = i * FIELD_COUNT;

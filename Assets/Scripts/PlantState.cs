@@ -10,8 +10,8 @@ public class PlantState : MonoBehaviour
     public Plant plant;
     public Dictionary<Attributes, float> plantAttributes = new Dictionary<Attributes, float>();
 
-    private float maxLife;
-    private float life;
+    public float maxLife;
+    public float life;
     private float lifeProportion;
     
     void Start()

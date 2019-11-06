@@ -11,7 +11,7 @@ public class BiomaController : MonoBehaviour {
     
     public string Name { get => bioma.name; }
     public Sprite Image { get => Resources.Load<Sprite>(bioma.image); }
-    public float Temperature { get => bioma.temperature; }
+    public AttributeRange Temperature { get => bioma.specs[Attributes.TEMPERATURE]; }
 
     private GameObject plantPrefab;
     private string plantToBeInstantiated;

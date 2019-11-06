@@ -6,7 +6,6 @@ public class Bioma {
 
     public string name;
     public string image;
-    public float temperature;
     public Dictionary<Attributes, AttributeRange> specs = new Dictionary<Attributes, AttributeRange>();
     public string[] rawSpecs;
 

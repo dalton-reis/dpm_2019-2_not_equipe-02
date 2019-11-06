@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour {
         background.sprite = biomaController.Image;
         title.text = biomaController.Name;
 
-        healthBar.UpdateBar(biomaController.Temperature, 50);
+        healthBar.UpdateBar(biomaController.Temperature.minValue, biomaController.Temperature.maxValue);
     }
 
     public void ShowPlantSpawns(bool show) {

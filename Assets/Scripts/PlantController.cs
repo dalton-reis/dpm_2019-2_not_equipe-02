@@ -21,7 +21,11 @@ public class PlantController : MonoBehaviour {
     private const float GRAVITY_SCALE = 100f;
     private float currentHealth;
 
+    private PlantState plantState;
+
     private void Start() {
+        plantState = GetComponent<PlantState>();
+
         SetVisual();
         SetPhysicAttributes();
         SetName(name);
@@ -29,15 +33,14 @@ public class PlantController : MonoBehaviour {
         gameManager = GameObject.FindObjectOfType<GameManager>();
     }
 
-    private void FixedUpdate() { 
-        healthBar.UpdateBar(currentHealth, 100);
-        currentHealth += 8f * Time.deltaTime;
-        if(currentHealth >= 100)
-            currentHealth = 0;
+    private void Update() { 
+        healthBar.UpdateBar(plantState.life, plantState.maxLife);
+
+        if(plantState.life <= 0)
+            GetComponent<Image>().color = new Color32(217, 38, 38, 255);
     }
 
     private void SetVisual() {
-        // GetComponent<RectTransform>().localPosition = Vector2.zero;
         GetComponent<RectTransform>().sizeDelta = new Vector2(Width, Height);
         GetComponent<Image>().sprite = Image;
     }

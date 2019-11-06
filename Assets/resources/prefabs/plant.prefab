@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 6252344098584686299}
   - component: {fileID: 6309008589752760179}
   - component: {fileID: 3882960967487814844}
-  - component: {fileID: 8122029367785160103}
   - component: {fileID: 6278167562776446689}
+  - component: {fileID: 8122029367785160103}
   - component: {fileID: 114769576998543168}
   m_Layer: 9
   m_Name: plant
@@ -127,26 +127,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &8122029367785160103
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3621346731669045631}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eee161022add565448efe2d1ad7d567e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  plant:
-    name: 
-    description: 
-    image: 
-    width: 0
-    height: 0
-    rawSpecs: []
-  healthBar: {fileID: 1428934601645616400}
 --- !u!114 &6278167562776446689
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,6 +158,26 @@ MonoBehaviour:
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   delegates: []
+--- !u!114 &8122029367785160103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3621346731669045631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eee161022add565448efe2d1ad7d567e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plant:
+    name: 
+    description: 
+    image: 
+    width: 0
+    height: 0
+    rawSpecs: []
+  healthBar: {fileID: 1428934601645616400}
 --- !u!114 &114769576998543168
 MonoBehaviour:
   m_ObjectHideFlags: 0

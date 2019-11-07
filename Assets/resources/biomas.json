@@ -2,26 +2,26 @@
     "biomas": [
         {
             "name": "Caatinga",
-            "image": "images/background/caatinga",
+            "image": "images/background/caatinga_novo",
 			"rawSpecs": [
-				"TEMPERATURE", "70.0", "100.0",
-				"AIR_HUMIDITY", "0.0", "30.0"
+				"TEMPERATURE", "16.67", "77.78",
+				"AIR_HUMIDITY", "0.0", "33.33"
 			]
         },
         {
             "name": "Cerrado",
             "image": "images/background/cerrado",
-            "rawSpecs": [
-				"TEMPERATURE", "70.0", "100.0",
-				"AIR_HUMIDITY", "70.0", "70.0"
+            "rawSpecs": [				
+				"TEMPERATURE", "0.0", "100.0",
+				"AIR_HUMIDITY", "5.6", "44.44"
 			]
         },
         {
             "name": "Amazônia",
             "image": "images/background/amazonia",
             "rawSpecs": [
-				"TEMPERATURE", "70.0", "100.0",
-				"AIR_HUMIDITY", "70.0", "70.0"
+				"TEMPERATURE", "66.67", "100.0",
+				"AIR_HUMIDITY", "66.67", "100.0"
 			]
 		}
     ],

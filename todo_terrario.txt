@@ -1,0 +1,27 @@
+ - Remover plantas
+ 
+ - Controlar a temperatura
+   - Realizar pequenas alterações aleatórias em cima da temperatura
+     para que o aluno tenha mais interação com o terrário.
+ 
+ - Dar água para plantas
+ 
+ - Poder adubar o solo
+   - Existirão 3 tipos de adubos
+   - Se o adubo do bioma correto for utilizado, adicionar a propriedade SOIL_NUTRIENTS
+   - Se o adubo do bioma errado for utilizado, decrementar o valor do SOIL_NUTRIENTS
+   
+ - Alternar aleatoriamente a humidade do bioma.
+   - A valor será exibido em uma barra, que não terá interação do aluno.
+
+ - Realizar a atualização dos valores das plantas.
+   - Diminuir a umidade do solo com o tempo.
+   - Diminuir os nutrientes do solo com o tempo.
+   
+ - Feedback do estado da planta
+	- Temperatura (termometro)
+	- Sede (copo da água)
+	- Nutrientes (3 adubos, um para cada bioma)
+	- Umidade do ambiente (usar a imagem de um vapor)
+	
+ - Colocar algo que destaca (uma seta, por exemplo) o slot de terra quando for plantar uma planta.

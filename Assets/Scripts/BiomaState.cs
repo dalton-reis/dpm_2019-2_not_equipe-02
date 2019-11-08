@@ -6,6 +6,7 @@ public class BiomaState : MonoBehaviour
 {
     public Bioma bioma;
     public Dictionary<Attributes, float> biomaAttributes = new Dictionary<Attributes, float>();
+    public SimpleHealthBar temperatureBar;
 
     void Start()
     {
@@ -15,5 +16,11 @@ public class BiomaState : MonoBehaviour
     
     void Update()
     {
+        if (temperatureBar == null)
+        {
+            temperatureBar = GameObject.Find("TemperatureBar").GetComponent<SimpleHealthBar>();
+        }
+        temperatureBar.UpdateBar(biomaAttributes[Attributes.TEMPERATURE], 100);
     }
+    
 }

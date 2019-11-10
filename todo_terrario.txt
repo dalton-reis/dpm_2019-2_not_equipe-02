@@ -1,8 +1,7 @@
  - Remover plantas
  
- - Controlar a temperatura
-   - Realizar pequenas alterações aleatórias em cima da temperatura
-     para que o aluno tenha mais interação com o terrário.
+ - Realizar pequenas alterações aleatórias em cima da temperatura
+   para que o aluno tenha mais interação com o terrário.
  
  - Dar água para plantas
  

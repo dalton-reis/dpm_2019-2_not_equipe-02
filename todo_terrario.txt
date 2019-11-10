@@ -24,3 +24,5 @@
 	- Umidade do ambiente (usar a imagem de um vapor)
 	
  - Colocar algo que destaca (uma seta, por exemplo) o slot de terra quando for plantar uma planta.
+
+ - Log das informações para consulta do professor.

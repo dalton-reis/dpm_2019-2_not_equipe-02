@@ -48,9 +48,8 @@ public class PlantState : MonoBehaviour
         float distanceCount = 0;
         distanceCount += GetDistance(biomaState.biomaAttributes);
         distanceCount += GetDistance(plantAttributes);
-        Debug.Log("Before delta time: " + distanceCount);
+        Debug.Log("Distance: " + distanceCount);
         distanceCount = distanceCount * Time.deltaTime;
-        Debug.Log("After delta time: " + distanceCount);
 
         bool hasDamage = distanceCount > 0;
         if (hasDamage)

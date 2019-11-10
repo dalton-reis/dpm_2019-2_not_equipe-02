@@ -26,6 +26,12 @@ public class AttributeRange
         }
         return value - maxValue;
     }
+
+    public float GetAverage()
+    {
+        return (minValue + maxValue) / 2;
+    }
+
     public override string ToString()
     {
         return "{minValue: " + minValue + ", maxValue: " + maxValue + "}";

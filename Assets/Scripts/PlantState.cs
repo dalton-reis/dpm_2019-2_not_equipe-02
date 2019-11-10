@@ -37,7 +37,7 @@ public class PlantState : MonoBehaviour
         {
             SetLife(lifeToUpdate);
         }
-        Debug.Log(plant.name + ": " + life);
+        // Debug.Log(plant.name + ": " + life);
     }
 
     private float GetLifeUpdateValue()
@@ -47,9 +47,9 @@ public class PlantState : MonoBehaviour
         float distanceCount = 0;
         distanceCount += GetDistance(biomaState.biomaAttributes);
         distanceCount += GetDistance(plantAttributes);
-        Debug.Log("Before delta time: " + distanceCount);
+        // Debug.Log("Before delta time: " + distanceCount);
         distanceCount = distanceCount * Time.deltaTime;
-        Debug.Log("After delta time: " + distanceCount);
+        // Debug.Log("After delta time: " + distanceCount);
 
         bool hasDamage = distanceCount > 0;
         if (hasDamage)
@@ -69,7 +69,7 @@ public class PlantState : MonoBehaviour
         foreach (var attribute in specs)
         {
             float distance = plant.specs[attribute.Key].getDistance(attribute.Value);
-            Debug.Log(attribute.Key + ": " + plant.specs[attribute.Key] + ": value " + attribute.Value + " -> distance " + distance);
+            // Debug.Log(attribute.Key + ": " + plant.specs[attribute.Key] + ": value " + attribute.Value + " -> distance " + distance);
             distanceCount += distance;
         }
         return distanceCount;
@@ -79,7 +79,6 @@ public class PlantState : MonoBehaviour
     {
         this.life = life;
         this.lifeProportion = (life / this.maxLife) * 100;
-        
     }
 
 }

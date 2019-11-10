@@ -5,7 +5,8 @@ using UnityEngine;
 public class PlantState : MonoBehaviour
 {
 
-    private static readonly int ATTRIBUTE_PROPORTION = 10;
+    private static readonly float LIFE_RECOVERY_FACTOR = 5;
+    private static readonly float ATTRIBUTE_PROPORTION = 10;
 
     public Plant plant;
     public Dictionary<Attributes, float> plantAttributes = new Dictionary<Attributes, float>();
@@ -37,7 +38,7 @@ public class PlantState : MonoBehaviour
         {
             SetLife(lifeToUpdate);
         }
-        // Debug.Log(plant.name + ": " + life);
+        Debug.Log(plant.name + ": " + life);
     }
 
     private float GetLifeUpdateValue()
@@ -47,9 +48,9 @@ public class PlantState : MonoBehaviour
         float distanceCount = 0;
         distanceCount += GetDistance(biomaState.biomaAttributes);
         distanceCount += GetDistance(plantAttributes);
-        // Debug.Log("Before delta time: " + distanceCount);
+        Debug.Log("Before delta time: " + distanceCount);
         distanceCount = distanceCount * Time.deltaTime;
-        // Debug.Log("After delta time: " + distanceCount);
+        Debug.Log("After delta time: " + distanceCount);
 
         bool hasDamage = distanceCount > 0;
         if (hasDamage)
@@ -59,7 +60,8 @@ public class PlantState : MonoBehaviour
         else
         {
             var attributesCount = Enum.GetNames(typeof(Attributes)).Length;
-            return attributesCount * 100;
+            float recoveryLife = attributesCount * LIFE_RECOVERY_FACTOR;
+            return recoveryLife * Time.deltaTime;
         }
     }
 
@@ -69,7 +71,7 @@ public class PlantState : MonoBehaviour
         foreach (var attribute in specs)
         {
             float distance = plant.specs[attribute.Key].getDistance(attribute.Value);
-            // Debug.Log(attribute.Key + ": " + plant.specs[attribute.Key] + ": value " + attribute.Value + " -> distance " + distance);
+            Debug.Log(attribute.Key + ": " + plant.specs[attribute.Key] + ": value " + attribute.Value + " -> distance " + distance);
             distanceCount += distance;
         }
         return distanceCount;

@@ -13,10 +13,10 @@ GameObject:
   - component: {fileID: 7447942381126739520}
   - component: {fileID: 687131390527816709}
   - component: {fileID: 8027448693874342748}
-  - component: {fileID: 7079502285193456511}
+  - component: {fileID: 324897107064322036}
   m_Layer: 5
   m_Name: NutrientsPlantHandlerPrefab
-  m_TagString: Untagged
+  m_TagString: SOIL_NUTRIENTS
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -118,7 +118,7 @@ MonoBehaviour:
   m_Delegates: []
   delegates: []
   dragging: 0
---- !u!114 &7079502285193456511
+--- !u!114 &324897107064322036
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -127,6 +127,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1462794508237085769}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53549119c9e2a564aa8017d6143eb5b0, type: 3}
+  m_Script: {fileID: 11500000, guid: 78adee5d235ce6a43b71c371b3d62581, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

@@ -7,6 +7,9 @@ TagManager:
   - Wall
   - Spawn
   - Plant
+  - SOIL_NUTRIENTS
+  - SOIL_HUMIDITY
+  - REMOVE
   layers:
   - Default
   - TransparentFX

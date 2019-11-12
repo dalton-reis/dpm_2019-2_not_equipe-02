@@ -14,7 +14,8 @@ public class PlantState : MonoBehaviour
     public float maxLife;
     public float life;
     private float lifeProportion;
-    
+     private float PLANT_ATTRIBUTE_CHANGE_FACTOR = 15;
+
     void Start()
     {
         plantAttributes.Add(Attributes.SOIL_HUMIDITY, 100);
@@ -85,6 +86,24 @@ public class PlantState : MonoBehaviour
     {
         this.life = life;
         this.lifeProportion = (life / this.maxLife) * 100;
+    }
+
+    public void IncreaseSoilHumidity() {
+        IncreaseAttribute(Attributes.SOIL_HUMIDITY);
+    }
+
+    public void IncreaseSoilNutrients() {
+        IncreaseAttribute(Attributes.SOIL_NUTRIENTS);
+    }
+
+    private void IncreaseAttribute(Attributes attribute)
+    {
+        float value = plantAttributes[attribute];
+        value += (PLANT_ATTRIBUTE_CHANGE_FACTOR * Time.deltaTime);
+        float maxAttributeValue = plant.specs[attribute].maxValue;
+        value = value > maxAttributeValue ? maxAttributeValue : value;
+        Debug.Log("Aumentou atributo " + attribute.ToString() + " de " + plantAttributes[attribute] + " para " + value);
+        plantAttributes[attribute] = value;
     }
 
 }

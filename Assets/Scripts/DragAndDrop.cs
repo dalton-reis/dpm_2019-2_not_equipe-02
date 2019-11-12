@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 public class DragAndDrop : EventTrigger {
@@ -11,6 +10,7 @@ public class DragAndDrop : EventTrigger {
     private const float objectHeight = 100;
 
     void Start() {
+        dragging = true;
         Camera.main.transform.position = new Vector3(Screen.width, Screen.height, -10);
 		screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height));
     }
@@ -33,6 +33,7 @@ public class DragAndDrop : EventTrigger {
 
     public override void OnPointerUp(PointerEventData eventData) {
         dragging = false;
+        Destroy(gameObject);
     }
 
 }

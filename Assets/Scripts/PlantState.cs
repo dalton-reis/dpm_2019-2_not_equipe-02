@@ -72,6 +72,11 @@ public class PlantState : MonoBehaviour
             float distance = plant.specs[attribute.Key].getDistance(attribute.Value);
             Debug.Log(attribute.Key + ": " + plant.specs[attribute.Key] + ": value " + attribute.Value + " -> distance " + distance);
             distanceCount += distance;
+
+            if(distance != 0)
+                GetComponent<PlantController>().AddAttributeNeeded(attribute.Key);
+            else
+                GetComponent<PlantController>().RemoveAttributeNeeded(attribute.Key);
         }
         return distanceCount;
     }

@@ -13,7 +13,6 @@ public class PlantSpawn : MonoBehaviour {
     public void InstantiatePlant() {
         biomaController.InstantiatePlant(new Vector2(transform.position.x, transform.position.y+50));
         gameManager.ShowPlantSpawns(false);
-        gameManager.InstantiatedPlantsCount++;
         Destroy(gameObject);
     }
 }

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Image))]
@@ -17,20 +18,24 @@ public class PlantController : MonoBehaviour {
     public float Height { get => plant.height; }
 
     [SerializeField] private SimpleHealthBar healthBar;
+    [SerializeField] private GameObject[] warnings;
+
 
     private const float GRAVITY_SCALE = 100f;
     private float currentHealth;
 
     private PlantState plantState;
+    private HashSet<Attributes> attributesNeeded = new HashSet<Attributes>();
 
     private void Start() {
         plantState = GetComponent<PlantState>();
+        gameManager = GameObject.FindObjectOfType<GameManager>();
 
         SetVisual();
-        SetPhysicAttributes();
+        SetPhysicsAttributes();
         SetName(name);
 
-        gameManager = GameObject.FindObjectOfType<GameManager>();
+        gameManager.InstantiatedPlantsCount++;
     }
 
     private void Update() { 
@@ -38,6 +43,8 @@ public class PlantController : MonoBehaviour {
 
         if(plantState.life <= 0)
             GetComponent<Image>().color = new Color32(217, 38, 38, 255);
+
+        SetAttributesWarning();
     }
 
     private void SetVisual() {
@@ -45,7 +52,7 @@ public class PlantController : MonoBehaviour {
         GetComponent<Image>().sprite = Image;
     }
 
-    private void SetPhysicAttributes() {
+    private void SetPhysicsAttributes() {
         GetComponent<Rigidbody2D>().gravityScale = GRAVITY_SCALE;
         GetComponent<Rigidbody2D>().freezeRotation = true;
         GetComponent<BoxCollider2D>().size = new Vector2(Width, Height);
@@ -55,10 +62,33 @@ public class PlantController : MonoBehaviour {
         gameObject.name = name;
     }
 
-    public override string ToString() => plant.ToString();
-
     public void ShowPlantInfos() {
         gameManager.ShowPlantInfoPanel(this.plant);
     }
 
+    public void SetAttributesWarning() {
+        foreach(GameObject warning in warnings)
+            warning.SetActive(false);
+            
+        foreach (Attributes attribute in attributesNeeded) {
+            foreach(GameObject warning in warnings) {
+                if(warning.name == attribute.ToString())
+                    warning.SetActive(true);
+            }
+        }
+    }
+
+    public void AddAttributeNeeded(Attributes attribute) {
+        attributesNeeded.Add(attribute);
+    }
+
+    public void RemoveAttributeNeeded(Attributes attribute) {
+        attributesNeeded.Remove(attribute);
+    }
+
+    private void OnDestroy() {
+        gameManager.InstantiatedPlantsCount--;
+    }
+
+    public override string ToString() => plant.ToString();
 }

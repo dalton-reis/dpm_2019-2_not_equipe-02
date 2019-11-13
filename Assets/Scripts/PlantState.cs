@@ -7,6 +7,7 @@ public class PlantState : MonoBehaviour
 
     private static readonly float LIFE_RECOVERY_FACTOR = 5;
     private static readonly float ATTRIBUTE_PROPORTION = 10;
+    private static readonly float DEFAULT_PLANT_ATTRIBUTE_CHANGE_FACTOR = 10;
 
     public Plant plant;
     public Dictionary<Attributes, float> plantAttributes = new Dictionary<Attributes, float>();
@@ -14,7 +15,6 @@ public class PlantState : MonoBehaviour
     public float maxLife;
     public float life;
     private float lifeProportion;
-     private float PLANT_ATTRIBUTE_CHANGE_FACTOR = 15;
 
     void Start()
     {
@@ -39,12 +39,14 @@ public class PlantState : MonoBehaviour
         {
             SetLife(lifeToUpdate);
         }
+        DecreasePlantAttributes();
+
         Debug.Log(plant.name + ": " + life);
     }
 
     private float GetLifeUpdateValue()
     {
-        BiomaState biomaState = GameObject.Find("Bioma").GetComponent<BiomaState>();
+        BiomaState biomaState = getBiomaState();
 
         float distanceCount = 0;
         distanceCount += GetDistance(biomaState.biomaAttributes);
@@ -96,14 +98,36 @@ public class PlantState : MonoBehaviour
         IncreaseAttribute(Attributes.SOIL_NUTRIENTS);
     }
 
+    private void DecreasePlantAttributes()
+    {
+        DecreaseAttribute(Attributes.SOIL_NUTRIENTS, 1);
+
+        BiomaState biomaState = getBiomaState();
+        float temperature = biomaState.biomaAttributes[Attributes.TEMPERATURE];
+        DecreaseAttribute(Attributes.SOIL_HUMIDITY, 1.5f + (temperature / 100));
+    }
+
     private void IncreaseAttribute(Attributes attribute)
     {
         float value = plantAttributes[attribute];
-        value += (PLANT_ATTRIBUTE_CHANGE_FACTOR * Time.deltaTime);
-        float maxAttributeValue = plant.specs[attribute].maxValue;
+        value += DEFAULT_PLANT_ATTRIBUTE_CHANGE_FACTOR;
+        float maxAttributeValue = 100;
         value = value > maxAttributeValue ? maxAttributeValue : value;
-        Debug.Log("Aumentou atributo " + attribute.ToString() + " de " + plantAttributes[attribute] + " para " + value);
         plantAttributes[attribute] = value;
+    }
+
+    private void DecreaseAttribute(Attributes attribute, float changeAttributeFactor)
+    {
+        float value = plantAttributes[attribute];
+        value -= (changeAttributeFactor * Time.deltaTime);
+        float minAttributeValue = 0;
+        value = value < minAttributeValue ? minAttributeValue : value;
+        plantAttributes[attribute] = value;
+    }
+
+    private BiomaState getBiomaState()
+    {
+        return GameObject.Find("Bioma").GetComponent<BiomaState>();
     }
 
 }

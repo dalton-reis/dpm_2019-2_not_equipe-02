@@ -36,8 +36,8 @@
 			"rawSpecs": [
 				"TEMPERATURE", "30.0", "50.0",
 				"AIR_HUMIDITY", "0.0", "30.0",
-				"SOIL_HUMIDITY", "70.0", "100.0",
-				"SOIL_NUTRIENTS", "70.0", "100.0"
+				"SOIL_HUMIDITY", "60.0", "80.0",
+				"SOIL_NUTRIENTS", "80.0", "100.0"
 			]
 		},
 		{
@@ -50,8 +50,8 @@
 			"rawSpecs": [
 				"TEMPERATURE", "70.0", "100.0",
 				"AIR_HUMIDITY", "50.0", "100.0",
-				"SOIL_HUMIDITY", "70.0", "100.0",
-				"SOIL_NUTRIENTS", "70.0", "100.0"
+				"SOIL_HUMIDITY", "60.0", "80.0",
+				"SOIL_NUTRIENTS", "80.0", "100.0"
 			]
 		},
 		{
@@ -64,8 +64,8 @@
 			"rawSpecs": [
 				"TEMPERATURE", "70.0", "100.0",
 				"AIR_HUMIDITY", "50.0", "100.0",
-				"SOIL_HUMIDITY", "70.0", "100.0",
-				"SOIL_NUTRIENTS", "70.0", "100.0"
+				"SOIL_HUMIDITY", "60.0", "80.0",
+				"SOIL_NUTRIENTS", "0.0", "100.0"
 			]
 		},
 		{
@@ -78,8 +78,8 @@
 			"rawSpecs": [
 				"TEMPERATURE", "70.0", "100.0",
 				"AIR_HUMIDITY", "50.0", "100.0",
-				"SOIL_HUMIDITY", "70.0", "100.0",
-				"SOIL_NUTRIENTS", "70.0", "100.0"
+				"SOIL_HUMIDITY", "60.0", "80.0",
+				"SOIL_NUTRIENTS", "0.0", "100.0"
 			]
 		},
 		{
@@ -92,8 +92,8 @@
 			"rawSpecs": [
 				"TEMPERATURE", "70.0", "100.0",
 				"AIR_HUMIDITY", "50.0", "100.0",
-				"SOIL_HUMIDITY", "70.0", "100.0",
-				"SOIL_NUTRIENTS", "70.0", "100.0"
+				"SOIL_HUMIDITY", "60.0", "80.0",
+				"SOIL_NUTRIENTS", "0.0", "100.0"
 			]
 		},
 		{
@@ -106,8 +106,8 @@
 			"rawSpecs": [
 				"TEMPERATURE", "70.0", "100.0",
 				"AIR_HUMIDITY", "50.0", "100.0",
-				"SOIL_HUMIDITY", "70.0", "100.0",
-				"SOIL_NUTRIENTS", "70.0", "100.0"
+				"SOIL_HUMIDITY", "60.0", "80.0",
+				"SOIL_NUTRIENTS", "0.0", "100.0"
 			]
 		},
 		{
@@ -120,8 +120,8 @@
 			"rawSpecs": [
 				"TEMPERATURE", "70.0", "100.0",
 				"AIR_HUMIDITY", "50.0", "100.0",
-				"SOIL_HUMIDITY", "70.0", "100.0",
-				"SOIL_NUTRIENTS", "70.0", "100.0"
+				"SOIL_HUMIDITY", "60.0", "80.0",
+				"SOIL_NUTRIENTS", "0.0", "100.0"
 			]
 		},
 		{
@@ -134,8 +134,8 @@
 			"rawSpecs": [
 				"TEMPERATURE", "70.0", "100.0",
 				"AIR_HUMIDITY", "50.0", "100.0",
-				"SOIL_HUMIDITY", "70.0", "100.0",
-				"SOIL_NUTRIENTS", "70.0", "100.0"
+				"SOIL_HUMIDITY", "60.0", "80.0",
+				"SOIL_NUTRIENTS", "0.0", "100.0"
 			]
 		},
 		{
@@ -148,8 +148,8 @@
 			"rawSpecs": [
 				"TEMPERATURE", "70.0", "100.0",
 				"AIR_HUMIDITY", "50.0", "100.0",
-				"SOIL_HUMIDITY", "70.0", "100.0",
-				"SOIL_NUTRIENTS", "70.0", "100.0"
+				"SOIL_HUMIDITY", "60.0", "80.0",
+				"SOIL_NUTRIENTS", "0.0", "100.0"
 			]
 		},
 		{
@@ -162,8 +162,8 @@
 			"rawSpecs": [
 				"TEMPERATURE", "70.0", "100.0",
 				"AIR_HUMIDITY", "50.0", "100.0",
-				"SOIL_HUMIDITY", "70.0", "100.0",
-				"SOIL_NUTRIENTS", "70.0", "100.0"
+				"SOIL_HUMIDITY", "60.0", "80.0",
+				"SOIL_NUTRIENTS", "0.0", "100.0"
 			]
 		},
 		{
@@ -176,8 +176,8 @@
 			"rawSpecs": [
 				"TEMPERATURE", "70.0", "100.0",
 				"AIR_HUMIDITY", "50.0", "100.0",
-				"SOIL_HUMIDITY", "70.0", "100.0",
-				"SOIL_NUTRIENTS", "70.0", "100.0"
+				"SOIL_HUMIDITY", "60.0", "80.0",
+				"SOIL_NUTRIENTS", "0.0", "100.0"
 			]
 		},
 		{
@@ -190,8 +190,8 @@
 			"rawSpecs": [
 				"TEMPERATURE", "70.0", "100.0",
 				"AIR_HUMIDITY", "50.0", "100.0",
-				"SOIL_HUMIDITY", "70.0", "100.0",
-				"SOIL_NUTRIENTS", "70.0", "100.0"
+				"SOIL_HUMIDITY", "60.0", "80.0",
+				"SOIL_NUTRIENTS", "0.0", "100.0"
 			]
 		}
 	]

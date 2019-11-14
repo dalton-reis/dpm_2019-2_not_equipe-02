@@ -1,17 +1,11 @@
- - Realizar a atualização dos valores das plantas. (ADRINER)
-   - Diminuir a umidade do solo com o tempo.
-   - Diminuir os nutrientes do solo com o tempo.
- 
- - Realizar pequenas alterações aleatórias em cima da temperatura (ADRINER)
-   para que o aluno tenha mais interação com o terrário.
-   
  - Alternar aleatoriamente a humidade do bioma. (ADRINER)
    - A valor será exibido em uma barra, que não terá interação do aluno.
  
+ - Realizar pequenas alterações aleatórias em cima da temperatura (ADRINER)
+   para que o aluno tenha mais interação com o terrário.
+ 
  - Remover plantas (TESTE)
    - BUG (remove a posição onde pode plantar e não readiciona)
- 
- - Dar água para plantas (TESTE)
  
  - Poder adubar o solo (TESTE)
    

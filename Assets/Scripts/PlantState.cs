@@ -9,6 +9,8 @@ public class PlantState : MonoBehaviour
     private static readonly float ATTRIBUTE_PROPORTION = 10;
     private static readonly float DEFAULT_PLANT_ATTRIBUTE_CHANGE_FACTOR = 10;
 
+    private static readonly float DECREASE_WEIGHT = 500;
+
     public Plant plant;
     public Dictionary<Attributes, float> plantAttributes = new Dictionary<Attributes, float>();
 
@@ -18,8 +20,8 @@ public class PlantState : MonoBehaviour
 
     void Start()
     {
-        plantAttributes.Add(Attributes.SOIL_HUMIDITY, 100);
-        plantAttributes.Add(Attributes.SOIL_NUTRIENTS, 100);
+        plantAttributes.Add(Attributes.SOIL_HUMIDITY, plant.specs[Attributes.SOIL_HUMIDITY].GetAverage());
+        plantAttributes.Add(Attributes.SOIL_NUTRIENTS, plant.specs[Attributes.SOIL_NUTRIENTS].GetAverage());
 
         var attributesCount = Enum.GetNames(typeof(Attributes)).Length;
         maxLife = 100 * attributesCount * ATTRIBUTE_PROPORTION;
@@ -100,11 +102,13 @@ public class PlantState : MonoBehaviour
 
     private void DecreasePlantAttributes()
     {
-        DecreaseAttribute(Attributes.SOIL_NUTRIENTS, 1);
+        float soilNutrients = 100f;
+        float soilHumidity = 25f;
+        DecreaseAttribute(Attributes.SOIL_NUTRIENTS, soilNutrients / DECREASE_WEIGHT);
 
         BiomaState biomaState = getBiomaState();
         float temperature = biomaState.biomaAttributes[Attributes.TEMPERATURE];
-        DecreaseAttribute(Attributes.SOIL_HUMIDITY, 1.5f + (temperature / 100));
+        DecreaseAttribute(Attributes.SOIL_HUMIDITY, (soilHumidity + temperature) / DECREASE_WEIGHT);
     }
 
     private void IncreaseAttribute(Attributes attribute)

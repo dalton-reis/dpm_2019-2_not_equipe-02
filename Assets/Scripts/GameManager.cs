@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
@@ -52,6 +53,11 @@ public class GameManager : MonoBehaviour {
 
     public void HidePlantInfoPanel() {
         plantInfoPanel.SetActive(false);
+    }
+
+    public void BackToMenu() {
+        Destroy(GameObject.FindObjectOfType<BiomaController>().gameObject);
+        SceneManager.LoadScene("Scenarios");
     }
 
 }

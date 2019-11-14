@@ -1,18 +1,15 @@
  - Alternar aleatoriamente a humidade do bioma. (ADRINER)
-   - A valor será exibido em uma barra, que não terá interação do aluno.
+   - O valor será exibido em uma barra, que não terá interação do aluno.
  
  - Realizar pequenas alterações aleatórias em cima da temperatura (ADRINER)
    para que o aluno tenha mais interação com o terrário.
  
- - Remover plantas (TESTE)
-   - BUG (remove a posição onde pode plantar e não readiciona)
+ - [BUG] Ao voltar da null pointer.
  
- - Poder adubar o solo (TESTE)
+ - Remover plantas (TESTE)
+   - [BUG] (remove a posição onde pode plantar e não readiciona)
    
  - Feedback do estado da planta
-	- Temperatura (termometro)
-	- Sede (copo da água)
-	- Nutrientes (3 adubos, um para cada bioma)
 	- Umidade do ambiente (usar a imagem de um vapor) (TODO)
 	
  - Log das informações para consulta do professor.

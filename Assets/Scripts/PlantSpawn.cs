@@ -11,8 +11,10 @@ public class PlantSpawn : MonoBehaviour {
     }
 
     public void InstantiatePlant() {
-        biomaController.InstantiatePlant(new Vector2(transform.position.x, transform.position.y+50));
+        GameObject newPlant = biomaController.InstantiatePlant(new Vector2(transform.position.x, transform.position.y+50));
         gameManager.ShowPlantSpawns(false);
-        Destroy(gameObject);
+        
+        newPlant.GetComponent<PlantController>().SpawnPoint = gameObject;
+        gameObject.SetActive(false);
     }
 }

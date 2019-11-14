@@ -10,16 +10,17 @@ public class PlantController : MonoBehaviour {
     [HideInInspector] public Plant plant;
 
     private GameManager gameManager;
+    private GameObject spawnPoint;
 
     public string PlantName { get => plant.name; }
     public string Description { get => plant.description; }
     public Sprite Image { get => Resources.Load<Sprite>(plant.image); }
     public float Width { get => plant.width; }
     public float Height { get => plant.height; }
+    public GameObject SpawnPoint { get => spawnPoint; set => spawnPoint = value; }
 
     [SerializeField] private SimpleHealthBar healthBar;
     [SerializeField] private GameObject[] warnings;
-
 
     private const float GRAVITY_SCALE = 100f;
     private float currentHealth;
@@ -88,6 +89,7 @@ public class PlantController : MonoBehaviour {
 
     private void OnDestroy() {
         gameManager.InstantiatedPlantsCount--;
+        spawnPoint.SetActive(true);
     }
 
     public override string ToString() => plant.ToString();

@@ -20,7 +20,7 @@ public class BiomaController : MonoBehaviour {
         plantPrefab = Resources.Load<GameObject>("prefabs/plant");
     }
 
-    public void InstantiatePlant(Vector2 position) {
+    public GameObject InstantiatePlant(Vector2 position) {
         GameObject newPlant = Instantiate(plantPrefab, position, Quaternion.identity);
         newPlant.transform.SetParent(GameObject.Find("Plants").transform);
         newPlant.name = plantToBeInstantiated;
@@ -30,6 +30,8 @@ public class BiomaController : MonoBehaviour {
         newPlant.GetComponent<PlantState>().plant = plant;
 
         plants.Add(newPlant.GetComponent<PlantController>());
+
+        return newPlant;
     }
 
     public void SetPlantToBeInstantiated(string name) {

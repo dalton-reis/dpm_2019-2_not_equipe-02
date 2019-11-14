@@ -3,14 +3,9 @@
  
  - Realizar pequenas alterações aleatórias em cima da temperatura (ADRINER)
    para que o aluno tenha mais interação com o terrário.
- 
- - [BUG] Ao voltar da null pointer.
- 
- - Remover plantas (TESTE)
-   - [BUG] (remove a posição onde pode plantar e não readiciona)
    
  - Feedback do estado da planta
-	- Umidade do ambiente (usar a imagem de um vapor) (TODO)
+	- Umidade do ambiente (usar a imagem de um vapor) (Alex)
 	
  - Log das informações para consulta do professor.
  

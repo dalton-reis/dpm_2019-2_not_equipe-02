@@ -1,13 +1,8 @@
- - Alternar aleatoriamente a humidade do bioma. (ADRINER)
-   - O valor será exibido em uma barra, que não terá interação do aluno.
- 
- - Realizar pequenas alterações aleatórias em cima da temperatura (ADRINER)
-   para que o aluno tenha mais interação com o terrário.
-   
  - Feedback do estado da planta
 	- Umidade do ambiente (usar a imagem de um vapor) (Alex)
 	
  - Log das informações para consulta do professor.
+   - Pode ser feito com uma integração com o firebase.
  
  - Ajustar informações das plantas.
  

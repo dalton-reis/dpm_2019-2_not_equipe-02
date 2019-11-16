@@ -9,7 +9,7 @@ public class PlantState : MonoBehaviour
     private static readonly float ATTRIBUTE_PROPORTION = 10;
     private static readonly float DEFAULT_PLANT_ATTRIBUTE_CHANGE_FACTOR = 10;
 
-    private static readonly float DECREASE_WEIGHT = 500;
+    private static readonly float DECREASE_WEIGHT = 300;
 
     public Plant plant;
     public Dictionary<Attributes, float> plantAttributes = new Dictionary<Attributes, float>();
@@ -103,7 +103,7 @@ public class PlantState : MonoBehaviour
     private void DecreasePlantAttributes()
     {
         float soilNutrients = 100f;
-        float soilHumidity = 25f;
+        float soilHumidity = 50f;
         DecreaseAttribute(Attributes.SOIL_NUTRIENTS, soilNutrients / DECREASE_WEIGHT);
 
         BiomaState biomaState = getBiomaState();

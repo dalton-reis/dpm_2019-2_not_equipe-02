@@ -7,6 +7,7 @@ public class BiomaState : MonoBehaviour
 
     public Bioma bioma;
     public Dictionary<Attributes, float> biomaAttributes = new Dictionary<Attributes, float>();
+    private Dictionary<Attributes, AleatoryEventConsumer> aleatoryConsumers = new Dictionary<Attributes, AleatoryEventConsumer>();
     public SimpleHealthBar temperatureBar;
     public SimpleHealthBar airHumidityBar;
 
@@ -14,52 +15,56 @@ public class BiomaState : MonoBehaviour
     {
         biomaAttributes.Add(Attributes.TEMPERATURE, bioma.specs[Attributes.TEMPERATURE].GetAverage());
         biomaAttributes.Add(Attributes.AIR_HUMIDITY, bioma.specs[Attributes.AIR_HUMIDITY].GetAverage());
+
+        aleatoryConsumers[Attributes.TEMPERATURE] = new AleatoryEventConsumer(25, 25000);
+        aleatoryConsumers[Attributes.AIR_HUMIDITY] = new AleatoryEventConsumer(30, 19000);
     }
 
     void Update()
     {
-        loadBiomaBars();
+        LoadBiomaBars();
+        UpdateOnAleatoryEventsValues();
         temperatureBar.UpdateBar(biomaAttributes[Attributes.TEMPERATURE], 100);
         airHumidityBar.UpdateBar(biomaAttributes[Attributes.AIR_HUMIDITY], 100);
     }
 
+    private void UpdateOnAleatoryEventsValues()
+    {
+        foreach (var aleatoryConsumer in aleatoryConsumers)
+        {
+            var attribute = aleatoryConsumer.Key;
+            var value = aleatoryConsumer.Value.ConsumeValue();
+            UpdateAttributeTimeInvariant(attribute, value);
+        }
+    }
+
     public void IncreaseTemperature()
     {
-        float temperature = biomaAttributes[Attributes.TEMPERATURE];
-        temperature += (BIOMA_ATTRIBUTE_CHANGE_FACTOR * Time.deltaTime);
-        float maxTemperature = bioma.specs[Attributes.TEMPERATURE].maxValue;
-        temperature = temperature > maxTemperature ? maxTemperature : temperature;
-        biomaAttributes[Attributes.TEMPERATURE] = temperature;
+        UpdateAttribute(Attributes.TEMPERATURE, BIOMA_ATTRIBUTE_CHANGE_FACTOR);
     }
 
     public void DecreaseTemperature()
     {
-        float temperature = biomaAttributes[Attributes.TEMPERATURE];
-        temperature -= (BIOMA_ATTRIBUTE_CHANGE_FACTOR * Time.deltaTime);
-        float minTemperature = bioma.specs[Attributes.TEMPERATURE].minValue;
-        temperature = temperature < minTemperature ? minTemperature : temperature;
-        biomaAttributes[Attributes.TEMPERATURE] = temperature;
+        UpdateAttribute(Attributes.TEMPERATURE, -BIOMA_ATTRIBUTE_CHANGE_FACTOR);
     }
 
-    public void IncreaseAirHumidity()
+    private void UpdateAttribute(Attributes attribute, float value)
     {
-        float airHumidity = biomaAttributes[Attributes.AIR_HUMIDITY];
-        airHumidity += (BIOMA_ATTRIBUTE_CHANGE_FACTOR * Time.deltaTime);
-        float maxAirHumidity = bioma.specs[Attributes.AIR_HUMIDITY].maxValue;
-        airHumidity = airHumidity > maxAirHumidity ? maxAirHumidity : airHumidity;
-        biomaAttributes[Attributes.AIR_HUMIDITY] = airHumidity;
+        UpdateAttributeTimeInvariant(attribute, value * Time.deltaTime);
     }
 
-    public void DecreaseAirHumidity()
+    private void UpdateAttributeTimeInvariant(Attributes attribute, float value)
     {
-        float airHumidity = biomaAttributes[Attributes.AIR_HUMIDITY];
-        airHumidity -= (BIOMA_ATTRIBUTE_CHANGE_FACTOR * Time.deltaTime);
-        float minAirHumidity = bioma.specs[Attributes.AIR_HUMIDITY].minValue;
-        airHumidity = airHumidity < minAirHumidity ? minAirHumidity : airHumidity;
-        biomaAttributes[Attributes.AIR_HUMIDITY] = airHumidity;
+        float attributeValue = biomaAttributes[attribute];
+        attributeValue += value;
+        float maxAttributeValue = bioma.specs[attribute].maxValue;
+        float minAttributeValue = bioma.specs[attribute].minValue;
+        attributeValue = attributeValue > maxAttributeValue ? maxAttributeValue : attributeValue;
+        attributeValue = attributeValue < minAttributeValue ? minAttributeValue : attributeValue;
+        biomaAttributes[attribute] = attributeValue;
     }
 
-    private void loadBiomaBars()
+    private void LoadBiomaBars()
     {
         if (temperatureBar == null)
         {
@@ -68,6 +73,14 @@ public class BiomaState : MonoBehaviour
         if (airHumidityBar == null)
         {
             airHumidityBar = GameObject.Find("AirHumidityBar").GetComponent<SimpleHealthBar>();
+        }
+    }
+
+    private void OnDestroy()
+    {
+        foreach (var aleatoryConsumer in aleatoryConsumers)
+        {
+            aleatoryConsumer.Value.Kill();
         }
     }
 

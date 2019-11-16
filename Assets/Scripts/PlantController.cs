@@ -89,7 +89,8 @@ public class PlantController : MonoBehaviour {
 
     private void OnDestroy() {
         gameManager.InstantiatedPlantsCount--;
-        spawnPoint.SetActive(true);
+        if(!spawnPoint.activeSelf)
+            spawnPoint.SetActive(true);
     }
 
     public override string ToString() => plant.ToString();

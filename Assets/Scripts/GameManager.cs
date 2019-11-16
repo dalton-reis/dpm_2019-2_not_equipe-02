@@ -24,7 +24,8 @@ public class GameManager : MonoBehaviour {
         set {
             if(value < maxInstantiatedPlantsCount) {
                 instantiatedPlantsCount = value;
-                plantsList.SetActive(true);
+                if(!plantsList.activeSelf)
+                    plantsList.SetActive(true);
             } else {
                instantiatedPlantsCount = maxInstantiatedPlantsCount;
                plantsList.SetActive(false);

@@ -6,6 +6,7 @@ public class Plant {
     
     public string name;
     public string description;
+    public string sprite;
     public string image;
     public float width;
     public float height;

@@ -27,7 +27,7 @@ public class ListCreator : MonoBehaviour {
             ItemListDetails itemDetails = spawnedItem.GetComponent<ItemListDetails>();
             
             itemDetails.text.text = plants[i].name;
-            itemDetails.image.sprite = Resources.Load<Sprite>(plants[i].image);
+            itemDetails.image.sprite = Resources.Load<Sprite>(plants[i].sprite);
             
             itemDetails.image.GetComponent<RectTransform>().sizeDelta = new Vector2(
                 plants[i].width / 2,

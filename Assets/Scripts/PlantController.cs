@@ -14,6 +14,7 @@ public class PlantController : MonoBehaviour {
 
     public string PlantName { get => plant.name; }
     public string Description { get => plant.description; }
+    public Sprite Sprite { get => Resources.Load<Sprite>(plant.sprite); }
     public Sprite Image { get => Resources.Load<Sprite>(plant.image); }
     public float Width { get => plant.width; }
     public float Height { get => plant.height; }
@@ -50,7 +51,7 @@ public class PlantController : MonoBehaviour {
 
     private void SetVisual() {
         GetComponent<RectTransform>().sizeDelta = new Vector2(Width, Height);
-        GetComponent<Image>().sprite = Image;
+        GetComponent<Image>().sprite = Sprite;
     }
 
     private void SetPhysicsAttributes() {

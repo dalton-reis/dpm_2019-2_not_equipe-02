@@ -30,7 +30,8 @@
 			"name": "Malva-branca",
 			"scientificName": "Sida cordifolia L",
 			"description": "É um tipo de arbusto que ocorre em terrenos com solo arenoso, possui flores na cor amarela e alaranjada. O pólen e néctar são um atrativo para abelhas e para a produção de mel, sendo muito utilizada em jardins de flora melífera.",
-			"image": "images/plants/sprites/malva-branca",
+			"sprite": "images/plants/sprites/malva-branca",
+			"image": "images/plants/images/malva-branca",
 			"width": 150,
 			"height": 215,
 			"rawSpecs": [
@@ -44,7 +45,8 @@
 			"name": "Angico",
 			"scientificName": "Anadenanthera colubrina",
 			"description": "Angico é uma árvore famosa por suas flores brancas que costumam atrair abelhas produtoras de mel. Angico se caracteriza por apresentar um rápido crescimento. É uma árvore com tronco robusto que produz uma alta quantidade de tanino, uma substância que evita o ataque de microrganismos que podem causar doenças. A casca do tronco do angico também apresenta propriedades medicinais, sendo indicada para reduzir sangramento, combater diarreia e ajudar na cicatrização da pele.",
-			"image": "images/plants/sprites/angico",
+			"sprite": "images/plants/sprites/angico",
+			"image": "images/plants/images/angico",
 			"width": 215,
 			"height": 215,
 			"rawSpecs": [
@@ -58,7 +60,8 @@
 			"name": "Cacto",
 			"scientificName": "Cactaceae",
 			"description": "Os cactos são muito comuns em ambientes secos e quente, devido à sua alta capacidade de acumular água, por isso é tão comum na Caatinga. Possui uma variedade de espécies, sendo que algumas podem chegar até a 18 m de altura. Apresentam caule suculento, formato cilíndrico e muitos espinhos, que nada mais são que as folhas que sofreram transformações para se adaptarem ao ambiente.",
-			"image": "images/plants/sprites/cactus",
+			"sprite": "images/plants/sprites/cacto",
+			"image": "images/plants/images/cacto",
 			"width": 130,
 			"height": 200,
 			"rawSpecs": [
@@ -72,7 +75,8 @@
 			"name": "Bromélia",
 			"scientificName": "Bromeliaceae",
 			"description": "A bromélia é uma planta que pertence à família Bromeliáceas, que possuem uma infinidade de espécies. A espécie mais popular da bromélia é o abacaxi, formada a partir da reunião de várias flores. Uma das características das bromélias está nas suas folhas, que normalmente são longas, estreitas, curvas e dispostas em camadas circulares. Devido à formação das folhas, elas possuem grande capacidade de armazenar água, sendo muito consumida por diferentes espécies de animais.",
-			"image": "images/plants/sprites/bromelia",
+			"sprite": "images/plants/sprites/bromelia",
+			"image": "images/plants/images/bromelia",
 			"width": 215,
 			"height": 215,
 			"rawSpecs": [
@@ -86,7 +90,8 @@
 			"name": "Buriti",
 			"scientificName": "Mauritia flexuosa",
 			"description": "No bioma Cerrado é a espécie que caracteriza as veredas, marcante fitofisionomia da região, ocorrendo também em matas de galeria e ciliares, podendo formar densos buritizais.",
-			"image": "images/plants/sprites/buriti",
+			"sprite": "images/plants/sprites/buriti",
+			"image": "images/plants/images/buriti",
 			"width": 215,
 			"height": 215,
 			"rawSpecs": [
@@ -100,7 +105,8 @@
 			"name": "Jatobá-do-cerrado",
 			"scientificName": "Hymenaea stigonocarpa",
 			"description": "Ocorre em cerrados e cerradões e mesmo sem flores pode ser identificada facilmente pelas suas folhas, que são alternas e compostas por dois folíolos. Outros nomes: jatobá, jatobá-do-campo, jatobá-da-serra, jatobá-capão, jatobá-de-casca-fina, jataí. Os usos medicinais registrados pela bibliografia para o jatobá-do-cerrado são no tratamento de problemas respiratórios, como expectorante, vermífugo, para dores no estômago, no peito e nas costas, pode estimular o apetite.",
-			"image": "images/plants/sprites/jatoba-do-cerrado",
+			"sprite": "images/plants/sprites/jatoba-do-cerrado",
+			"image": "images/plants/images/jatoba-do-cerrado",
 			"width": 215,
 			"height": 215,
 			"rawSpecs": [
@@ -114,7 +120,8 @@
 			"name": "Araticum",
 			"scientificName": "Annona crassiflora",
 			"description": "O nome araticum é derivado do tupi, podendo significar árvore de fibra rija e dura, fruto do céu, saboroso, ou ainda fruto mole. O araticum integra a medicina das populações tradicionais da região da Chapada dos Veadeiros, Goiás, que o utilizam como regulador de menstruação, para reumatismo, feridas.",
-			"image": "images/plants/sprites/araticum",
+			"sprite": "images/plants/sprites/araticum",
+			"image": "images/plants/images/araticum",
 			"width": 215,
 			"height": 215,
 			"rawSpecs": [
@@ -128,7 +135,8 @@
 			"name": "Pequi",
 			"scientificName": "Caryocar brasiliense",
 			"description": "O pequizeiro é uma árvore que habita cerrados, cerradões e matas secas ao longo de todo o bioma Cerrado. Queimadas recorrentes podem manter o pequizeiro na forma de subarbusto, em campos sujos. O pequizeiro é uma árvore de múltiplos valores: ecológico, cultural, gastronômico, medicinal, econômico.",
-			"image": "images/plants/sprites/pequi",
+			"sprite": "images/plants/sprites/pequi",
+			"image": "images/plants/images/pequi",
 			"width": 215,
 			"height": 215,
 			"rawSpecs": [
@@ -142,7 +150,8 @@
 			"name": "Arnica",
 			"scientificName": "Arnica montana",
 			"description": "Sendo popularmente conhecida, a Arnica é uma planta medicinal muito utilizada para tratar contusões, dores reumáticas, escoriações e dores musculares. Isso se dá devido ao seu potencial anti-inflamatório, comprovadamente efetivo, para além do seu uso consagrado como cicatrizante e no combate às hemorragias.",
-			"image": "images/plants/sprites/arnica",
+			"sprite": "images/plants/sprites/arnica",
+			"image": "images/plants/images/arnica",
 			"width": 215,
 			"height": 215,
 			"rawSpecs": [
@@ -156,7 +165,8 @@
 			"name": "Pau Brasil",
 			"scientificName": "Paubrasilia echinata",
 			"description": "Uma das mais conhecidas da história do Brasil devido ter sido a principal e mais lucrativa descoberta dos portugueses nas nossas terras. Atualmente, a árvore encontra-se quase extinta, havendo bem poucos espécimes de Pau-Brasil. A planta possui o tronco em tonalidades de cinza ou vermelho e centro avermelhado.",
-			"image": "images/plants/sprites/pau-brasil",
+			"sprite": "images/plants/sprites/pau-brasil",
+			"image": "images/plants/images/pau-brasil",
 			"width": 215,
 			"height": 215,
 			"rawSpecs": [
@@ -170,7 +180,8 @@
 			"name": "Jequitibá Rosa",
 			"scientificName": "Cariniana legalis",
 			"description": "O nome científico da árvore conhecida como Jequitibá Rosa ou Jequitibá Vermelho é Cariniana legalis e ela faz parte da família Lecythidaceae. Uma árvore bastante imponente que pode chegar a ter mais de 50 metros de altura e o seu diâmetro pode chegar a um metro. As suas flores são brancas e as folhas do tipo permanentes, o florescimento dessa árvore frondosa acontece nos meses de dezembro e janeiro.",
-			"image": "images/plants/sprites/jequitiba-rosa",
+			"sprite": "images/plants/sprites/jequitiba-rosa",
+			"image": "images/plants/images/jequitiba-rosa",
 			"width": 215,
 			"height": 215,
 			"rawSpecs": [
@@ -184,7 +195,8 @@
 			"name": "Orquídea",
 			"scientificName": "Orchidaceae",
 			"description": "A Orquídea é uma espécie que se destaca dentre as pessoas que gostam de flores. Diferentemente do que se pensa a Orquídea não é uma planta parasita e sim epífita, ou seja, ela se abriga sobre árvores, mas não extrai nada das mesmas. As raízes dessa planta são aéreas para que elas possam se fixar nos troncos ou galhos das árvores. As Orquídeas buscam um lugar que tenha sombra e umidade que lhes ajude a sobreviver e se desenvolver.",
-			"image": "images/plants/sprites/orquidea",
+			"sprite": "images/plants/sprites/orquidea",
+			"image": "images/plants/images/orquidea",
 			"width": 150,
 			"height": 215,
 			"rawSpecs": [

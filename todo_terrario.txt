@@ -6,6 +6,7 @@
  - Ajustar sprites.
 
  - Adicionar uma descrição do bioma, para que a criança consiga fazer a associação dos biomas/plantas.
+
  - Imagem real nas descrições.
  
  - Colocar as propriedades das plantas na descrição.

@@ -6,7 +6,7 @@ public class BiomaList : MonoBehaviour {
 
     private Bioma[] biomas;
     private Plant[] plants;
-    public GameObject[] buttons;
+    public Text[] texts;
 
     void Start() {
         biomas = JsonReader.LoadBiomas();
@@ -16,10 +16,8 @@ public class BiomaList : MonoBehaviour {
     }
 
     private void LoadBiomaButtons() {
-        for(int i = 0; i < biomas.Length; i++) {
-            buttons[i].GetComponent<Image>().sprite = Resources.Load<Sprite>(biomas[i].image);
-            buttons[i].GetComponentInChildren<Text>().text = biomas[i].name;
-        }
+        for(int i = 0; i < biomas.Length; i++)
+            texts[i].GetComponentInChildren<Text>().text = biomas[i].name;
     }
 
     public void LoadScene(Text name) {

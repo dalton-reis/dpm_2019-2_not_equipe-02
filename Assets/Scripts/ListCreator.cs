@@ -30,8 +30,8 @@ public class ListCreator : MonoBehaviour {
             itemDetails.image.sprite = Resources.Load<Sprite>(plants[i].sprite);
             
             itemDetails.image.GetComponent<RectTransform>().sizeDelta = new Vector2(
-                plants[i].width / 2,
-                plants[i].height / 2
+                plants[i].width / 2.5f,
+                plants[i].height / 2.5f
             );
         }
 	}

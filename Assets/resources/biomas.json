@@ -156,8 +156,8 @@
 			"name": "Pau Brasil",
 			"scientificName": "Paubrasilia echinata",
 			"description": "Uma das mais conhecidas da história do Brasil devido ter sido a principal e mais lucrativa descoberta dos portugueses nas nossas terras. Atualmente, a árvore encontra-se quase extinta, havendo bem poucos espécimes de Pau-Brasil. A planta possui o tronco em tonalidades de cinza ou vermelho e centro avermelhado.",
-			"image": "images/plants/old/cactus",
-			"width": 150,
+			"image": "images/plants/pau-brasil",
+			"width": 215,
 			"height": 215,
 			"rawSpecs": [
 				"TEMPERATURE", "70.0", "100.0",
@@ -170,8 +170,8 @@
 			"name": "Jequitibá Rosa",
 			"scientificName": "Cariniana legalis",
 			"description": "O nome científico da árvore conhecida como Jequitibá Rosa ou Jequitibá Vermelho é Cariniana legalis e ela faz parte da família Lecythidaceae. Uma árvore bastante imponente que pode chegar a ter mais de 50 metros de altura e o seu diâmetro pode chegar a um metro. As suas flores são brancas e as folhas do tipo permanentes, o florescimento dessa árvore frondosa acontece nos meses de dezembro e janeiro.",
-			"image": "images/plants/old/weird_plant",
-			"width": 150,
+			"image": "images/plants/jequitiba-rosa",
+			"width": 215,
 			"height": 215,
 			"rawSpecs": [
 				"TEMPERATURE", "70.0", "100.0",
@@ -184,7 +184,7 @@
 			"name": "Orquídea",
 			"scientificName": "Orchidaceae",
 			"description": "A Orquídea é uma espécie que se destaca dentre as pessoas que gostam de flores. Diferentemente do que se pensa a Orquídea não é uma planta parasita e sim epífita, ou seja, ela se abriga sobre árvores, mas não extrai nada das mesmas. As raízes dessa planta são aéreas para que elas possam se fixar nos troncos ou galhos das árvores. As Orquídeas buscam um lugar que tenha sombra e umidade que lhes ajude a sobreviver e se desenvolver.",
-			"image": "images/plants/old/cactus",
+			"image": "images/plants/orquidea",
 			"width": 150,
 			"height": 215,
 			"rawSpecs": [

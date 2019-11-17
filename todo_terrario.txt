@@ -4,6 +4,7 @@
  - Ajustar informações das plantas.
  
  - Ajustar sprites.
+   - Ajustar tamanho dos sprites.
 
  - Adicionar uma descrição do bioma, para que a criança consiga fazer a associação dos biomas/plantas.
  

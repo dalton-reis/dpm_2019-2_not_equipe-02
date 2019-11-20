@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1023330820036",
+    "firebase_url": "https://terrario-virtual.firebaseio.com",
+    "project_id": "terrario-virtual",
+    "storage_bucket": "terrario-virtual.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1023330820036:android:b680c39abb8eda42168e91",
+        "android_client_info": {
+          "package_name": "com.furb.terrariovirtual"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1023330820036-l3l4p67vk67g9jl4aearbab2uiaaoams.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBeRIYoEAm5pSbmHWc_nqfxmbCXjUiOarE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1023330820036-l3l4p67vk67g9jl4aearbab2uiaaoams.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1023330820036-hv62la5d4uqmtstijip65quku0f0oqh3.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.furb.terrariovirtual"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

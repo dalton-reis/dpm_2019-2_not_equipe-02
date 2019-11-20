@@ -43,7 +43,7 @@ public class PlantState : MonoBehaviour
         }
         DecreasePlantAttributes();
 
-        Debug.Log(plant.name + ": " + life);
+        // Debug.Log(plant.name + ": " + life);
     }
 
     private float GetLifeUpdateValue()
@@ -53,7 +53,7 @@ public class PlantState : MonoBehaviour
         float distanceCount = 0;
         distanceCount += GetDistance(biomaState.biomaAttributes);
         distanceCount += GetDistance(plantAttributes);
-        Debug.Log("Distance: " + distanceCount);
+        // Debug.Log("Distance: " + distanceCount);
         distanceCount = distanceCount * Time.deltaTime;
 
         bool hasDamage = distanceCount > 0;
@@ -75,7 +75,7 @@ public class PlantState : MonoBehaviour
         foreach (var attribute in specs)
         {
             float distance = plant.specs[attribute.Key].getDistance(attribute.Value);
-            Debug.Log(attribute.Key + ": " + plant.specs[attribute.Key] + ": value " + attribute.Value + " -> distance " + distance);
+            // Debug.Log(attribute.Key + ": " + plant.specs[attribute.Key] + ": value " + attribute.Value + " -> distance " + distance);
             distanceCount += distance;
 
             if(distance != 0)

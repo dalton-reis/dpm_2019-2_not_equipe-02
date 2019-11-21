@@ -1,12 +1,14 @@
  - Log das informações para consulta do professor.
    - Pode ser feito com uma integração com o firebase.
  
- - Ajustar informações das plantas.
+ - Ajustar informações das plantas para que a criança possa fazer a associação com o bioma.
 
  - Remover mensagens das plantas após a planta morrer (parar o cálculo de saúde).
 
  - Adicionar uma descrição do bioma, para que a criança consiga fazer a associação dos biomas/plantas.
  
+ - Arrastar as plantas para plantar.
+
  - Colocar as propriedades das plantas na descrição.
    - As propriedades só deverão ser apresentadas quando a planta morrer.
    - A ideia aqui é deixar a criança realizar a correlação entre os biomas e as plantas.

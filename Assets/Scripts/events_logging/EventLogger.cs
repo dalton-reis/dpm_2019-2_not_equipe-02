@@ -9,16 +9,17 @@ public class EventLogger
     private static EventLogger eventLogger;
     
     private FirebaseDatabase database;
-    private DatabaseReference eventData;
+    private DatabaseReference messagesReference;
 
     private EventLogger(string executionId, FirebaseDatabase database) {
         this.database = database;
-        eventData = this.database.RootReference.Child("events").Child(executionId);
+        messagesReference = this.database.RootReference.Child("events").Child(executionId).Child("messages");
+        var initMessages = JsonHelper.ToJson(new List<string>().ToArray());
+        messagesReference.SetValueAsync(initMessages);
     }
 
     public void Log(string value)
     {
-        var messagesReference = eventData.Child("messages");
         messagesReference
             .GetValueAsync()
             .ContinueWith(task =>  {
@@ -59,10 +60,15 @@ public class EventLogger
     {
         if (eventLogger == null)
         {
-            var executionId = Guid.NewGuid().ToString().Substring(0, 6);
-            eventLogger = new EventLogger(executionId, FirebaseDatabase.DefaultInstance);
+            Start();
         }
         return eventLogger;
+    }
+
+    public static void Start()
+    {
+        var executionId = Guid.NewGuid().ToString().Substring(0, 3);
+        eventLogger = new EventLogger(executionId, FirebaseDatabase.DefaultInstance);
     }
 
 }

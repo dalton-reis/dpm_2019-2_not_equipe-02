@@ -11,7 +11,8 @@ public class BiomaList : MonoBehaviour {
     void Start() {
         biomas = JsonReader.LoadBiomas();
         plants = JsonReader.LoadPlants();
-
+        
+        EventLogger.Start();
         LoadBiomaButtons();
     }
 

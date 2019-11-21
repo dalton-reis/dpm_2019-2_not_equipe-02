@@ -31,7 +31,7 @@ public class BiomaController : MonoBehaviour {
 
         plants.Add(newPlant.GetComponent<PlantController>());
 
-        EventLogger.Get().Log("Planta adicionada!");
+        EventLogger.Get().Log("Nova planta adicionada: " + plant.name);
 
         return newPlant;
     }

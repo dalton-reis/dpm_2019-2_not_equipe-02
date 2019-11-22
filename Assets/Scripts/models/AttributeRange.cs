@@ -22,7 +22,7 @@ public class AttributeRange
         }
         if (value < minValue)
         {
-            return minValue - value;
+            return value - minValue;
         }
         return value - maxValue;
     }

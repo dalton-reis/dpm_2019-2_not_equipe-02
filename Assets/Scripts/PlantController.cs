@@ -27,7 +27,7 @@ public class PlantController : MonoBehaviour {
     private float currentHealth;
 
     private PlantState plantState;
-    private HashSet<Attributes> attributesNeeded = new HashSet<Attributes>();
+    private HashSet<AttributeWarning> attributesNeeded = new HashSet<AttributeWarning>();
 
     private void Start() {
         plantState = GetComponent<PlantState>();
@@ -72,20 +72,25 @@ public class PlantController : MonoBehaviour {
         foreach(GameObject warning in warnings)
             warning.SetActive(false);
             
-        foreach (Attributes attribute in attributesNeeded) {
+        foreach (AttributeWarning attribute in attributesNeeded) {
             foreach(GameObject warning in warnings) {
                 if(warning.name == attribute.ToString())
+                {
                     warning.SetActive(true);
+                    warning.GetComponent<Image>().color = attribute.distance > 0 ?
+                        new Color32(217, 38, 38, 255) :
+                        new Color32(255, 255, 255, 255);
+                }
             }
         }
     }
 
-    public void AddAttributeNeeded(Attributes attribute) {
-        attributesNeeded.Add(attribute);
+    public void AddAttributeNeeded(Attributes attribute, float distance) {
+        attributesNeeded.Add(new AttributeWarning(attribute, distance));
     }
 
     public void RemoveAttributeNeeded(Attributes attribute) {
-        attributesNeeded.Remove(attribute);
+        attributesNeeded.Remove(new AttributeWarning(attribute, 0));
     }
 
     private void OnDestroy() {

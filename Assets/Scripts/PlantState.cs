@@ -16,6 +16,7 @@ public class PlantState : MonoBehaviour
 
     public float maxLife;
     public float life;
+    public bool isDead = false;
     private float lifeProportion;
 
     void Start()
@@ -30,7 +31,11 @@ public class PlantState : MonoBehaviour
     
     void Update()
     {
+        if (isDead) {
+            return;
+        }
         float lifeToUpdate = life + GetLifeUpdateValue();
+        DecreasePlantAttributes();
         if (lifeToUpdate > maxLife)
         {
             SetLife(maxLife);
@@ -41,9 +46,17 @@ public class PlantState : MonoBehaviour
         {
             SetLife(lifeToUpdate);
         }
-        DecreasePlantAttributes();
-
-        // Debug.Log(plant.name + ": " + life);
+        if (life == 0)
+        {
+            var plantData = PlantAttributsEventLogger.toJson(plant, getBiomaState().biomaAttributes, plantAttributes);
+            EventLogger.Get().Log(new EventModel(LogEventType.PLANT_DIED, plant.name, plantData));
+            foreach (var attribute in plant.specs)
+            {
+                GetComponent<PlantController>().RemoveAttributeNeeded(attribute.Key);
+            }
+            isDead = true;
+        }
+        //Debug.Log(plant.name + ": " + life);
     }
 
     private float GetLifeUpdateValue()
@@ -53,7 +66,7 @@ public class PlantState : MonoBehaviour
         float distanceCount = 0;
         distanceCount += GetDistance(biomaState.biomaAttributes);
         distanceCount += GetDistance(plantAttributes);
-        // Debug.Log("Distance: " + distanceCount);
+        //Debug.Log("Distance: " + distanceCount);
         distanceCount = distanceCount * Time.deltaTime;
 
         bool hasDamage = distanceCount > 0;
@@ -75,11 +88,11 @@ public class PlantState : MonoBehaviour
         foreach (var attribute in specs)
         {
             float distance = plant.specs[attribute.Key].getDistance(attribute.Value);
-            // Debug.Log(attribute.Key + ": " + plant.specs[attribute.Key] + ": value " + attribute.Value + " -> distance " + distance);
-            distanceCount += distance;
+            //Debug.Log(attribute.Key + ": " + plant.specs[attribute.Key] + ": value " + attribute.Value + " -> distance " + distance);
+            distanceCount += Math.Abs(distance);
 
             if(distance != 0)
-                GetComponent<PlantController>().AddAttributeNeeded(attribute.Key);
+                GetComponent<PlantController>().AddAttributeNeeded(attribute.Key, distance);
             else
                 GetComponent<PlantController>().RemoveAttributeNeeded(attribute.Key);
         }

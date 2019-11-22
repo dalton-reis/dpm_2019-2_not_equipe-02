@@ -13,7 +13,7 @@ public class PlantAttributesInteractionHandler : MonoBehaviour {
             else if(gameObject.CompareTag("REMOVE")) {
                 var plantName = other.gameObject.GetComponent<PlantController>().plant.name;
                 Destroy(other.gameObject);
-                EventLogger.Get().Log("Planta removida: " + plantName);
+                EventLogger.Get().Log(new EventModel(LogEventType.PLANT_REMOVED, plantName));
             }
             Destroy(gameObject);
         }

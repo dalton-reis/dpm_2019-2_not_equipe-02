@@ -18,7 +18,7 @@ public class EventLogger
         messagesReference.SetValueAsync(initMessages);
     }
 
-    public void Log(string value)
+    public void Log(EventModel eventModel)
     {
         messagesReference
             .GetValueAsync()
@@ -36,7 +36,14 @@ public class EventLogger
                         string[] primitiveArray = JsonHelper.FromJson<string>((string) task.Result.Value);
                         messages.AddRange(primitiveArray);
                     }
-                    logOnDatabase(messagesReference, messages, value);
+                    logOnDatabase(messagesReference, messages, eventModel.toJson());
+                }
+            }).ContinueWith(task =>
+            {
+                if (task.IsFaulted)
+                {
+                    Debug.Log("Error on send event log.");
+                    Debug.Log(task.Exception);
                 }
             });
     }

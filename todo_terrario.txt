@@ -1,9 +1,8 @@
  - Log das informações para consulta do professor.
-   - Pode ser feito com uma integração com o firebase.
+   - Frontend para exibir os eventos (ADRINER).
+   - Adicionar um botão que mostra o código de consulta (ADRINER).
  
  - Ajustar informações das plantas para que a criança possa fazer a associação com o bioma.
-
- - Remover mensagens das plantas após a planta morrer (parar o cálculo de saúde).
 
  - Adicionar uma descrição do bioma, para que a criança consiga fazer a associação dos biomas/plantas.
  
@@ -12,12 +11,5 @@
  - Colocar as propriedades das plantas na descrição.
    - As propriedades só deverão ser apresentadas quando a planta morrer.
    - A ideia aqui é deixar a criança realizar a correlação entre os biomas e as plantas.
-
-LATER
-
- - Poder adubar o solo
-   - Existirão 3 tipos de adubos
-   - Se o adubo do bioma correto for utilizado, adicionar a propriedade SOIL_NUTRIENTS
-   - Se o adubo do bioma errado for utilizado, decrementar o valor do SOIL_NUTRIENTS
    
- - Colocar algo que destaca (uma seta, por exemplo) o slot de terra quando for plantar uma planta.
+ - Colocar algo que destaca (uma seta, por exemplo) no slot de terra quando for plantar uma planta.

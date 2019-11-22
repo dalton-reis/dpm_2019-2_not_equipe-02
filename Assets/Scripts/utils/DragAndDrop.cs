@@ -32,6 +32,10 @@ public class DragAndDrop : EventTrigger {
     }
 
     public override void OnPointerUp(PointerEventData eventData) {
+        DestroyObject();
+    }
+
+    public void DestroyObject() {
         dragging = false;
         Destroy(gameObject);
     }

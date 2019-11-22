@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ListCreator : MonoBehaviour {
 
@@ -22,17 +21,15 @@ public class ListCreator : MonoBehaviour {
             GameObject spawnedItem = Instantiate(item, pos, spawnPoint.rotation);
             
             spawnedItem.transform.SetParent(spawnPoint, false);
-            spawnedItem.transform.position = new Vector3(pos.x, spawnedItem.transform.position.y, spawnedItem.transform.position.z);
+            Vector3 itemPosition = spawnedItem.transform.position;
+            spawnedItem.transform.position = new Vector3(pos.x, itemPosition.y, itemPosition.z);
 
             ItemListDetails itemDetails = spawnedItem.GetComponent<ItemListDetails>();
             
             itemDetails.text.text = plants[i].name;
             itemDetails.image.sprite = Resources.Load<Sprite>(plants[i].sprite);
-            
-            itemDetails.image.GetComponent<RectTransform>().sizeDelta = new Vector2(
-                plants[i].width / 2.5f,
-                plants[i].height / 2.5f
-            );
+
+            itemDetails.image.GetComponent<RectTransform>().sizeDelta = new Vector2(115, 115);
         }
 	}
 }

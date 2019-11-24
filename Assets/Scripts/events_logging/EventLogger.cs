@@ -10,8 +10,10 @@ public class EventLogger
     
     private FirebaseDatabase database;
     private DatabaseReference messagesReference;
+    public string executionId;
 
     private EventLogger(string executionId, FirebaseDatabase database) {
+        this.executionId = executionId;
         this.database = database;
         messagesReference = this.database.RootReference.Child("events").Child(executionId).Child("messages");
         var initMessages = JsonHelper.ToJson(new List<string>().ToArray());

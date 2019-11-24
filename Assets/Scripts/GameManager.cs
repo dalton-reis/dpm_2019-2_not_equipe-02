@@ -17,6 +17,9 @@ public class GameManager : MonoBehaviour {
     [SerializeField] private Image plantImageSprite;
     [SerializeField] private GameObject plantInfoPanel;
 
+    [SerializeField] private GameObject logEventPanel;
+    [SerializeField] private Text logEventText;
+
     [SerializeField] private SimpleHealthBar healthBar;
 
     public int InstantiatedPlantsCount { 
@@ -54,6 +57,17 @@ public class GameManager : MonoBehaviour {
 
     public void HidePlantInfoPanel() {
         plantInfoPanel.SetActive(false);
+    }
+
+    public void ShowLogPanel()
+    {
+        logEventText.text = EventLogger.Get().executionId;
+        logEventPanel.SetActive(true);
+    }
+
+    public void HideLogPanel()
+    {
+        logEventPanel.SetActive(false);
     }
 
     public void BackToMenu() {

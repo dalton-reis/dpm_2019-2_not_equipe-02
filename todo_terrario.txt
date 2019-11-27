@@ -11,5 +11,7 @@
  - Colocar as propriedades das plantas na descrição.
    - As propriedades só deverão ser apresentadas quando a planta morrer.
    - A ideia aqui é deixar a criança realizar a correlação entre os biomas e as plantas.
+
+ - Quando a planta morrer, substituir por galhos secos, para indicar melhor que morreu.
    
  - Colocar algo que destaca (uma seta, por exemplo) no slot de terra quando for plantar uma planta.

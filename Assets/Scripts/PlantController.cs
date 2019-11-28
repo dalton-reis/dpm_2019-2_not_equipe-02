@@ -95,7 +95,7 @@ public class PlantController : MonoBehaviour {
 
     private void OnDestroy() {
         gameManager.InstantiatedPlantsCount--;
-        if(!spawnPoint.activeSelf)
+        if(spawnPoint != null && !spawnPoint.activeSelf)
             spawnPoint.SetActive(true);
     }
 

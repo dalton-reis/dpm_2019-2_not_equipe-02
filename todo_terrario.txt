@@ -1,13 +1,15 @@
- - Log das informações para consulta do professor.
-   - Frontend para exibir os eventos (ADRINER).
-   - Adicionar um botão que mostra o código de consulta (ADRINER).
- 
+ - Criar os cenários de fundo da Amazônia e do Cerrado.
+
  - Ajustar informações das plantas para que a criança possa fazer a associação com o bioma.
 
  - Adicionar uma descrição do bioma, para que a criança consiga fazer a associação dos biomas/plantas.
 
+ - Exibir o nome científico das plantas.
+
  - Colocar as propriedades das plantas na descrição.
    - As propriedades só deverão ser apresentadas quando a planta morrer.
    - A ideia aqui é deixar a criança realizar a correlação entre os biomas e as plantas.
+
+ - Quando a planta morrer, substituir por galhos secos, para indicar melhor que morreu.
    
  - Colocar algo que destaca (uma seta, por exemplo) no slot de terra quando for plantar uma planta.

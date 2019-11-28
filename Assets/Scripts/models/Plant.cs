@@ -5,6 +5,7 @@ using System.Collections.Generic;
 public class Plant {
     
     public string name;
+    public string scientificName;
     public string description;
     public string sprite;
     public string image;

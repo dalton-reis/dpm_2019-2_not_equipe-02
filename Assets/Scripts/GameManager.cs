@@ -20,6 +20,8 @@ public class GameManager : MonoBehaviour {
     [SerializeField] private GameObject logEventPanel;
     [SerializeField] private Text logEventText;
 
+    [SerializeField] private Text scientificNameText;
+
     [SerializeField] private SimpleHealthBar healthBar;
 
     public int InstantiatedPlantsCount { 
@@ -51,6 +53,7 @@ public class GameManager : MonoBehaviour {
     public void ShowPlantInfoPanel(Plant plant) {
         plantNameText.text = plant.name;
         plantDescriptionText.text = plant.description;
+        scientificNameText.text = "(" + plant.scientificName + ")";
         plantImageSprite.sprite = Resources.Load<Sprite>(plant.image);
         plantInfoPanel.SetActive(true);
     }

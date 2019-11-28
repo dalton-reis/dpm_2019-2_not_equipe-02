@@ -6,8 +6,6 @@
 
  - Ajustar informações das plantas para que a criança possa fazer a associação com o bioma. (Adriner)
 
- - Exibir o nome científico das plantas. (Alex)
-
  - Quando a planta morrer, substituir por galhos secos, para indicar melhor que morreu. (Alex)
 
  - Colocar algo que destaca (uma seta, por exemplo) no slot de terra quando for plantar uma planta. (Alex)  

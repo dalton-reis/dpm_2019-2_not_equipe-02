@@ -1,9 +1,5 @@
  - Criar os cenários de fundo da Amazônia. (Luma)
 
- - Adicionar uma descrição do bioma, para que a criança consiga fazer a associação dos biomas/plantas. (Alex)
-
- - Ajustar informações das plantas para que a criança possa fazer a associação com o bioma. (Adriner)
-
  - Quando a planta morrer, substituir por galhos secos, para indicar melhor que morreu. (Alex)
 
  - Colocar algo que destaca (uma seta, por exemplo) no slot de terra quando for plantar uma planta. (Alex)

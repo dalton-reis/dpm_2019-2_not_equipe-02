@@ -1,5 +1,7 @@
  - Caatinga
-
+  
+  Descrição: Se adapta em ambientes secos e quentes.
+  
   Especificação
 	"TEMPERATURE", "70.00", "100.00",
 	"AIR_HUMIDITY", "10.0", "30.00",
@@ -13,6 +15,8 @@
 	Bromélia *
 
  - Cerrado
+ 
+  Descrição: Se adapta bem em ambientes secos, com variações climáticas podendo chegar a temperaturas mínimas de 0ºC.
 
   Especificação
 	"TEMPERATURE", "20.0", "65.0",
@@ -28,6 +32,8 @@
 	
  - Amazonia
 
+  Descrição: Se adapta em ambientes úmidos e quentes.
+ 
   Especificação
 	"TEMPERATURE", "50.00", "90.0",
 	"AIR_HUMIDITY", "65.00", "100.0",
@@ -38,5 +44,5 @@
     Arnica *
 	Pau Brasil *
 	Jequitibá Rosa *
-	Orquídea *
+	Orquídea
 	

@@ -1,5 +1,3 @@
- - Ajustar os atributos das plantas. (Adriner)
-
  - Criar os cenários de fundo da Amazônia. (Luma)
 
  - Adicionar uma descrição do bioma, para que a criança consiga fazer a associação dos biomas/plantas. (Alex)

@@ -4,28 +4,43 @@
             "name": "Caatinga",
             "image": "images/background/caatinga_novo",
 			"rawSpecs": [
-				"TEMPERATURE", "16.67", "77.78",
-				"AIR_HUMIDITY", "0.0", "33.33"
+				"TEMPERATURE", "70.00", "100.00",
+				"AIR_HUMIDITY", "10.0", "30.00"
 			]
         },
         {
             "name": "Cerrado",
             "image": "images/background/cerrado",
             "rawSpecs": [				
-				"TEMPERATURE", "0.0", "100.0",
-				"AIR_HUMIDITY", "5.6", "44.44"
+				"TEMPERATURE", "20.0", "65.0",
+				"AIR_HUMIDITY", "20.00", "50.00"
 			]
         },
         {
             "name": "Amazônia",
             "image": "images/background/amazonia",
             "rawSpecs": [
-				"TEMPERATURE", "66.67", "100.0",
-				"AIR_HUMIDITY", "66.67", "100.0"
+				"TEMPERATURE", "50.00", "90.0",
+				"AIR_HUMIDITY", "65.00", "100.0"
 			]
 		}
     ],
 	"plants": [
+		{
+			"name": "Arnica",
+			"scientificName": "Arnica montana",
+			"description": "Sendo popularmente conhecida, a Arnica é uma planta medicinal muito utilizada para tratar contusões, dores reumáticas, escoriações e dores musculares. Isso se dá devido ao seu potencial anti-inflamatório, comprovadamente efetivo, para além do seu uso consagrado como cicatrizante e no combate às hemorragias.",
+			"sprite": "images/plants/sprites/arnica",
+			"image": "images/plants/images/arnica",
+			"width": 215,
+			"height": 215,
+			"rawSpecs": [
+				"TEMPERATURE", "50.00", "90.0",
+				"AIR_HUMIDITY", "65.00", "100.0",
+				"SOIL_HUMIDITY", "50.0", "75.0",
+				"SOIL_NUTRIENTS", "50.0", "75.0"
+			]
+		},
 		{
 			"name": "Malva-branca",
 			"scientificName": "Sida cordifolia L",
@@ -35,40 +50,10 @@
 			"width": 150,
 			"height": 215,
 			"rawSpecs": [
-				"TEMPERATURE", "30.0", "50.0",
-				"AIR_HUMIDITY", "0.0", "30.0",
-				"SOIL_HUMIDITY", "60.0", "80.0",
-				"SOIL_NUTRIENTS", "60.0", "80.0"
-			]
-		},
-		{
-			"name": "Angico",
-			"scientificName": "Anadenanthera colubrina",
-			"description": "Angico é uma árvore famosa por suas flores brancas que costumam atrair abelhas produtoras de mel. Angico se caracteriza por apresentar um rápido crescimento. É uma árvore com tronco robusto que produz uma alta quantidade de tanino, uma substância que evita o ataque de microrganismos que podem causar doenças. A casca do tronco do angico também apresenta propriedades medicinais, sendo indicada para reduzir sangramento, combater diarreia e ajudar na cicatrização da pele.",
-			"sprite": "images/plants/sprites/angico",
-			"image": "images/plants/images/angico",
-			"width": 350,
-			"height": 415,
-			"rawSpecs": [
-				"TEMPERATURE", "70.0", "100.0",
-				"AIR_HUMIDITY", "50.0", "100.0",
-				"SOIL_HUMIDITY", "60.0", "80.0",
-				"SOIL_NUTRIENTS", "60.0", "80.0"
-			]
-		},
-		{
-			"name": "Cacto",
-			"scientificName": "Cactaceae",
-			"description": "Os cactos são muito comuns em ambientes secos e quente, devido à sua alta capacidade de acumular água, por isso é tão comum na Caatinga. Possui uma variedade de espécies, sendo que algumas podem chegar até a 18 m de altura. Apresentam caule suculento, formato cilíndrico e muitos espinhos, que nada mais são que as folhas que sofreram transformações para se adaptarem ao ambiente.",
-			"sprite": "images/plants/sprites/cacto",
-			"image": "images/plants/images/cacto",
-			"width": 230,
-			"height": 400,
-			"rawSpecs": [
-				"TEMPERATURE", "70.0", "100.0",
-				"AIR_HUMIDITY", "50.0", "100.0",
-				"SOIL_HUMIDITY", "60.0", "80.0",
-				"SOIL_NUTRIENTS", "60.0", "80.0"
+				"TEMPERATURE", "70.00", "100.00",
+				"AIR_HUMIDITY", "10.0", "30.00",
+				"SOIL_HUMIDITY", "20.0", "70.0",
+				"SOIL_NUTRIENTS", "20.0", "70.0"
 			]
 		},
 		{
@@ -80,115 +65,10 @@
 			"width": 215,
 			"height": 215,
 			"rawSpecs": [
-				"TEMPERATURE", "70.0", "100.0",
-				"AIR_HUMIDITY", "50.0", "100.0",
-				"SOIL_HUMIDITY", "60.0", "80.0",
-				"SOIL_NUTRIENTS", "60.0", "80.0"
-			]
-		},
-		{
-			"name": "Buriti",
-			"scientificName": "Mauritia flexuosa",
-			"description": "No bioma Cerrado é a espécie que caracteriza as veredas, marcante fitofisionomia da região, ocorrendo também em matas de galeria e ciliares, podendo formar densos buritizais.",
-			"sprite": "images/plants/sprites/buriti",
-			"image": "images/plants/images/buriti",
-			"width": 350,
-			"height": 415,
-			"rawSpecs": [
-				"TEMPERATURE", "70.0", "100.0",
-				"AIR_HUMIDITY", "50.0", "100.0",
-				"SOIL_HUMIDITY", "60.0", "80.0",
-				"SOIL_NUTRIENTS", "60.0", "80.0"
-			]
-		},
-		{
-			"name": "Jatobá-do-cerrado",
-			"scientificName": "Hymenaea stigonocarpa",
-			"description": "Ocorre em cerrados e cerradões e mesmo sem flores pode ser identificada facilmente pelas suas folhas, que são alternas e compostas por dois folíolos. Outros nomes: jatobá, jatobá-do-campo, jatobá-da-serra, jatobá-capão, jatobá-de-casca-fina, jataí. Os usos medicinais registrados pela bibliografia para o jatobá-do-cerrado são no tratamento de problemas respiratórios, como expectorante, vermífugo, para dores no estômago, no peito e nas costas, pode estimular o apetite.",
-			"sprite": "images/plants/sprites/jatoba-do-cerrado",
-			"image": "images/plants/images/jatoba-do-cerrado",
-			"width": 350,
-			"height": 415,
-			"rawSpecs": [
-				"TEMPERATURE", "70.0", "100.0",
-				"AIR_HUMIDITY", "50.0", "100.0",
-				"SOIL_HUMIDITY", "60.0", "80.0",
-				"SOIL_NUTRIENTS", "60.0", "80.0"
-			]
-		},
-		{
-			"name": "Araticum",
-			"scientificName": "Annona crassiflora",
-			"description": "O nome araticum é derivado do tupi, podendo significar árvore de fibra rija e dura, fruto do céu, saboroso, ou ainda fruto mole. O araticum integra a medicina das populações tradicionais da região da Chapada dos Veadeiros, Goiás, que o utilizam como regulador de menstruação, para reumatismo, feridas.",
-			"sprite": "images/plants/sprites/araticum",
-			"image": "images/plants/images/araticum",
-			"width": 350,
-			"height": 415,
-			"rawSpecs": [
-				"TEMPERATURE", "70.0", "100.0",
-				"AIR_HUMIDITY", "50.0", "100.0",
-				"SOIL_HUMIDITY", "60.0", "80.0",
-				"SOIL_NUTRIENTS", "60.0", "80.0"
-			]
-		},
-		{
-			"name": "Pequi",
-			"scientificName": "Caryocar brasiliense",
-			"description": "O pequizeiro é uma árvore que habita cerrados, cerradões e matas secas ao longo de todo o bioma Cerrado. Queimadas recorrentes podem manter o pequizeiro na forma de subarbusto, em campos sujos. O pequizeiro é uma árvore de múltiplos valores: ecológico, cultural, gastronômico, medicinal, econômico.",
-			"sprite": "images/plants/sprites/pequi",
-			"image": "images/plants/images/pequi",
-			"width": 350,
-			"height": 415,
-			"rawSpecs": [
-				"TEMPERATURE", "70.0", "100.0",
-				"AIR_HUMIDITY", "50.0", "100.0",
-				"SOIL_HUMIDITY", "60.0", "80.0",
-				"SOIL_NUTRIENTS", "60.0", "80.0"
-			]
-		},
-		{
-			"name": "Arnica",
-			"scientificName": "Arnica montana",
-			"description": "Sendo popularmente conhecida, a Arnica é uma planta medicinal muito utilizada para tratar contusões, dores reumáticas, escoriações e dores musculares. Isso se dá devido ao seu potencial anti-inflamatório, comprovadamente efetivo, para além do seu uso consagrado como cicatrizante e no combate às hemorragias.",
-			"sprite": "images/plants/sprites/arnica",
-			"image": "images/plants/images/arnica",
-			"width": 215,
-			"height": 215,
-			"rawSpecs": [
-				"TEMPERATURE", "70.0", "100.0",
-				"AIR_HUMIDITY", "50.0", "100.0",
-				"SOIL_HUMIDITY", "60.0", "80.0",
-				"SOIL_NUTRIENTS", "60.0", "80.0"
-			]
-		},
-		{
-			"name": "Pau Brasil",
-			"scientificName": "Paubrasilia echinata",
-			"description": "Uma das mais conhecidas da história do Brasil devido ter sido a principal e mais lucrativa descoberta dos portugueses nas nossas terras. Atualmente, a árvore encontra-se quase extinta, havendo bem poucos espécimes de Pau-Brasil. A planta possui o tronco em tonalidades de cinza ou vermelho e centro avermelhado.",
-			"sprite": "images/plants/sprites/pau-brasil",
-			"image": "images/plants/images/pau-brasil",
-			"width": 350,
-			"height": 415,
-			"rawSpecs": [
-				"TEMPERATURE", "70.0", "100.0",
-				"AIR_HUMIDITY", "50.0", "100.0",
-				"SOIL_HUMIDITY", "60.0", "80.0",
-				"SOIL_NUTRIENTS", "60.0", "80.0"
-			]
-		},
-		{
-			"name": "Jequitibá Rosa",
-			"scientificName": "Cariniana legalis",
-			"description": "O nome científico da árvore conhecida como Jequitibá Rosa ou Jequitibá Vermelho é Cariniana legalis e ela faz parte da família Lecythidaceae. Uma árvore bastante imponente que pode chegar a ter mais de 50 metros de altura e o seu diâmetro pode chegar a um metro. As suas flores são brancas e as folhas do tipo permanentes, o florescimento dessa árvore frondosa acontece nos meses de dezembro e janeiro.",
-			"sprite": "images/plants/sprites/jequitiba-rosa",
-			"image": "images/plants/images/jequitiba-rosa",
-			"width": 350,
-			"height": 415,
-			"rawSpecs": [
-				"TEMPERATURE", "70.0", "100.0",
-				"AIR_HUMIDITY", "50.0", "100.0",
-				"SOIL_HUMIDITY", "60.0", "80.0",
-				"SOIL_NUTRIENTS", "60.0", "80.0"
+				"TEMPERATURE", "70.00", "100.00",
+				"AIR_HUMIDITY", "10.0", "30.00",
+				"SOIL_HUMIDITY", "20.0", "70.0",
+				"SOIL_NUTRIENTS", "20.0", "70.0"
 			]
 		},
 		{
@@ -200,10 +80,130 @@
 			"width": 150,
 			"height": 215,
 			"rawSpecs": [
-				"TEMPERATURE", "70.0", "100.0",
-				"AIR_HUMIDITY", "50.0", "100.0",
-				"SOIL_HUMIDITY", "60.0", "80.0",
-				"SOIL_NUTRIENTS", "60.0", "80.0"
+				"TEMPERATURE", "50.00", "90.0",
+				"AIR_HUMIDITY", "65.00", "100.0",
+				"SOIL_HUMIDITY", "50.0", "75.0",
+				"SOIL_NUTRIENTS", "50.0", "75.0"
+			]
+		},
+		{
+			"name": "Cacto",
+			"scientificName": "Cactaceae",
+			"description": "Os cactos são muito comuns em ambientes secos e quente, devido à sua alta capacidade de acumular água, por isso é tão comum na Caatinga. Possui uma variedade de espécies, sendo que algumas podem chegar até a 18 m de altura. Apresentam caule suculento, formato cilíndrico e muitos espinhos, que nada mais são que as folhas que sofreram transformações para se adaptarem ao ambiente.",
+			"sprite": "images/plants/sprites/cacto",
+			"image": "images/plants/images/cacto",
+			"width": 230,
+			"height": 400,
+			"rawSpecs": [
+				"TEMPERATURE", "70.00", "100.00",
+				"AIR_HUMIDITY", "10.0", "30.00",
+				"SOIL_HUMIDITY", "20.0", "70.0",
+				"SOIL_NUTRIENTS", "20.0", "70.0"
+			]
+		},
+		{
+			"name": "Angico",
+			"scientificName": "Anadenanthera colubrina",
+			"description": "Angico é uma árvore famosa por suas flores brancas que costumam atrair abelhas produtoras de mel. Angico se caracteriza por apresentar um rápido crescimento. É uma árvore com tronco robusto que produz uma alta quantidade de tanino, uma substância que evita o ataque de microrganismos que podem causar doenças. A casca do tronco do angico também apresenta propriedades medicinais, sendo indicada para reduzir sangramento, combater diarreia e ajudar na cicatrização da pele.",
+			"sprite": "images/plants/sprites/angico",
+			"image": "images/plants/images/angico",
+			"width": 350,
+			"height": 415,
+			"rawSpecs": [
+				"TEMPERATURE", "70.00", "100.00",
+				"AIR_HUMIDITY", "10.0", "30.00",
+				"SOIL_HUMIDITY", "20.0", "70.0",
+				"SOIL_NUTRIENTS", "20.0", "70.0"
+			]
+		},
+		{
+			"name": "Araticum",
+			"scientificName": "Annona crassiflora",
+			"description": "O nome araticum é derivado do tupi, podendo significar árvore de fibra rija e dura, fruto do céu, saboroso, ou ainda fruto mole. O araticum integra a medicina das populações tradicionais da região da Chapada dos Veadeiros, Goiás, que o utilizam como regulador de menstruação, para reumatismo, feridas.",
+			"sprite": "images/plants/sprites/araticum",
+			"image": "images/plants/images/araticum",
+			"width": 350,
+			"height": 415,
+			"rawSpecs": [
+				"TEMPERATURE", "20.0", "65.0",
+				"AIR_HUMIDITY", "20.00", "50.00",
+				"SOIL_HUMIDITY", "20.0", "80.0",
+				"SOIL_NUTRIENTS", "20.0", "80.0"
+			]
+		},
+		{
+			"name": "Jequitibá Rosa",
+			"scientificName": "Cariniana legalis",
+			"description": "O nome científico da árvore conhecida como Jequitibá Rosa ou Jequitibá Vermelho é Cariniana legalis e ela faz parte da família Lecythidaceae. Uma árvore bastante imponente que pode chegar a ter mais de 50 metros de altura e o seu diâmetro pode chegar a um metro. As suas flores são brancas e as folhas do tipo permanentes, o florescimento dessa árvore frondosa acontece nos meses de dezembro e janeiro.",
+			"sprite": "images/plants/sprites/jequitiba-rosa",
+			"image": "images/plants/images/jequitiba-rosa",
+			"width": 350,
+			"height": 415,
+			"rawSpecs": [
+				"TEMPERATURE", "50.00", "90.0",
+				"AIR_HUMIDITY", "65.00", "100.0",
+				"SOIL_HUMIDITY", "50.0", "75.0",
+				"SOIL_NUTRIENTS", "50.0", "75.0"
+			]
+		},
+		{
+			"name": "Pequi",
+			"scientificName": "Caryocar brasiliense",
+			"description": "O pequizeiro é uma árvore que habita cerrados, cerradões e matas secas ao longo de todo o bioma Cerrado. Queimadas recorrentes podem manter o pequizeiro na forma de subarbusto, em campos sujos. O pequizeiro é uma árvore de múltiplos valores: ecológico, cultural, gastronômico, medicinal, econômico.",
+			"sprite": "images/plants/sprites/pequi",
+			"image": "images/plants/images/pequi",
+			"width": 350,
+			"height": 415,
+			"rawSpecs": [
+				"TEMPERATURE", "20.0", "65.0",
+				"AIR_HUMIDITY", "20.00", "50.00",
+				"SOIL_HUMIDITY", "20.0", "80.0",
+				"SOIL_NUTRIENTS", "20.0", "80.0"
+			]
+		},
+		{
+			"name": "Pau Brasil",
+			"scientificName": "Paubrasilia echinata",
+			"description": "Uma das mais conhecidas da história do Brasil devido ter sido a principal e mais lucrativa descoberta dos portugueses nas nossas terras. Atualmente, a árvore encontra-se quase extinta, havendo bem poucos espécimes de Pau-Brasil. A planta possui o tronco em tonalidades de cinza ou vermelho e centro avermelhado.",
+			"sprite": "images/plants/sprites/pau-brasil",
+			"image": "images/plants/images/pau-brasil",
+			"width": 350,
+			"height": 415,
+			"rawSpecs": [
+				"TEMPERATURE", "50.00", "90.0",
+				"AIR_HUMIDITY", "65.00", "100.0",
+				"SOIL_HUMIDITY", "50.0", "75.0",
+				"SOIL_NUTRIENTS", "50.0", "75.0"
+			]
+		},
+		{
+			"name": "Jatobá-do-cerrado",
+			"scientificName": "Hymenaea stigonocarpa",
+			"description": "Ocorre em cerrados e cerradões e mesmo sem flores pode ser identificada facilmente pelas suas folhas, que são alternas e compostas por dois folíolos. Outros nomes: jatobá, jatobá-do-campo, jatobá-da-serra, jatobá-capão, jatobá-de-casca-fina, jataí. Os usos medicinais registrados pela bibliografia para o jatobá-do-cerrado são no tratamento de problemas respiratórios, como expectorante, vermífugo, para dores no estômago, no peito e nas costas, pode estimular o apetite.",
+			"sprite": "images/plants/sprites/jatoba-do-cerrado",
+			"image": "images/plants/images/jatoba-do-cerrado",
+			"width": 350,
+			"height": 415,
+			"rawSpecs": [
+				"TEMPERATURE", "20.0", "65.0",
+				"AIR_HUMIDITY", "20.00", "50.00",
+				"SOIL_HUMIDITY", "20.0", "80.0",
+				"SOIL_NUTRIENTS", "20.0", "80.0"
+			]
+		},
+		{
+			"name": "Buriti",
+			"scientificName": "Mauritia flexuosa",
+			"description": "No bioma Cerrado é a espécie que caracteriza as veredas, marcante fitofisionomia da região, ocorrendo também em matas de galeria e ciliares, podendo formar densos buritizais.",
+			"sprite": "images/plants/sprites/buriti",
+			"image": "images/plants/images/buriti",
+			"width": 350,
+			"height": 415,
+			"rawSpecs": [
+				"TEMPERATURE", "20.0", "65.0",
+				"AIR_HUMIDITY", "20.00", "50.00",
+				"SOIL_HUMIDITY", "20.0", "80.0",
+				"SOIL_NUTRIENTS", "20.0", "80.0"
 			]
 		}
 	]

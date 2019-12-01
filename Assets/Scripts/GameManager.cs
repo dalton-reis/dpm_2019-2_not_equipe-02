@@ -13,16 +13,21 @@ public class GameManager : MonoBehaviour {
     private int maxInstantiatedPlantsCount = 4;
 
     [SerializeField] private Text plantNameText;
+    [SerializeField] private Text scientificNameText;
     [SerializeField] private Text plantDescriptionText;
     [SerializeField] private Image plantImageSprite;
     [SerializeField] private GameObject plantInfoPanel;
 
+    [SerializeField] private Text biomaNameText;
+    [SerializeField] private Text biomaDescriptionText;
+    [SerializeField] private GameObject biomaInfoPanel;
+
     [SerializeField] private GameObject logEventPanel;
     [SerializeField] private Text logEventText;
 
-    [SerializeField] private Text scientificNameText;
-
     [SerializeField] private SimpleHealthBar healthBar;
+
+    private BiomaController biomaController;
 
     public int InstantiatedPlantsCount { 
         get => instantiatedPlantsCount; 
@@ -39,7 +44,7 @@ public class GameManager : MonoBehaviour {
     }
 
     void Start() {
-        BiomaController biomaController = FindObjectOfType<BiomaController>();
+        biomaController = FindObjectOfType<BiomaController>();
         background.sprite = biomaController.Image;
         title.text = biomaController.Name;
 
@@ -60,6 +65,18 @@ public class GameManager : MonoBehaviour {
 
     public void HidePlantInfoPanel() {
         plantInfoPanel.SetActive(false);
+    }
+
+    public void ShowBiomaInfoPanel() {
+        Bioma bioma = biomaController.bioma;
+
+        biomaNameText.text = bioma.name;
+        biomaDescriptionText.text = bioma.description;
+        biomaInfoPanel.SetActive(true);
+    }
+
+    public void HideBiomaInfoPanel() {
+        biomaInfoPanel.SetActive(false);
     }
 
     public void ShowLogPanel()

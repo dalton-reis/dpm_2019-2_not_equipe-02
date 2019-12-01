@@ -1,7 +1,5 @@
  - Criar os cenários de fundo da Amazônia. (Luma)
 
- - Adicionar uma descrição do Bioma.  (Alex)
-
  - Quando a planta morrer, substituir por galhos secos, para indicar melhor que morreu. (Alex)
 
  - Colocar algo que destaca (uma seta, por exemplo) no slot de terra quando for plantar uma planta. (Alex)

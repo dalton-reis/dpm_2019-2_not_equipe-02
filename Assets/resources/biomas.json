@@ -1,7 +1,8 @@
 {
     "biomas": [
         {
-            "name": "Caatinga",
+			"name": "Caatinga",
+			"description": "A Caatinga é um bioma exclusivamente brasileiro, ocupando aproximadamente cerca de 11% do território nacional. O nome “Caatinga” possui origem tupi-guarani e significa “floresta branca”.\nEsse bioma é afetado por secas extremas e períodos sem chuvas, característicos do clima semiárido. Por essa razão, a vegetação precisou desenvolver mecanismos de sobrevivência em razão da pouca disponibilidade de água.\nAs principais características da vegetação são árvores baixas, troncos tortuosos e que apresentam espinhos e folhas que caem no período da seca.",
             "image": "images/background/caatinga_novo",
 			"rawSpecs": [
 				"TEMPERATURE", "70.00", "100.00",
@@ -9,7 +10,8 @@
 			]
         },
         {
-            "name": "Cerrado",
+			"name": "Cerrado",
+			"description": "O Cerrado é o segundo maior bioma do Brasil, compreendendo cerca de 22% do território brasileiro e abrigando cerca de 11.627 espécies de plantas nativas. Caracteriza-se por ser uma região de savana, tendo uma formação vegetal de grande biodiversidade e grande potencial aquífero.\nA vegetação é em sua maior parte semelhante à de savana, com árvores baixas, esparsas, troncos retorcidos, folhas grossas e raízes longas; gramíneas e arbustos.",
             "image": "images/background/cerrado",
             "rawSpecs": [				
 				"TEMPERATURE", "20.0", "65.0",
@@ -18,7 +20,8 @@
         },
         {
             "name": "Amazônia",
-            "image": "images/background/amazonia",
+			"description": "A Amazônia é considerada a região de maior biodiversidade do planeta e o maior bioma do Brasil, chegando a ocupar mais de 40% do território nacional.\nNela existem aproximadamente 2.500 espécies de árvores e cerca de 30 mil espécies de plantas, das 100 mil existentes em toda a América do Sul. \nSua vegetação é densa e formada em grande parte por árvores de grande porte, sendo composta por vários ecossistemas como florestas densas de terra firme, florestas estacionais, florestas de igapó, campos alagados, refúgios montanhosos e outros.",
+			"image": "images/background/amazonia",
             "rawSpecs": [
 				"TEMPERATURE", "50.00", "90.0",
 				"AIR_HUMIDITY", "65.00", "100.0"

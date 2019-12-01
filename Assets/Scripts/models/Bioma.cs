@@ -5,6 +5,7 @@ using System.Collections.Generic;
 public class Bioma {
 
     public string name;
+    public string description;
     public string image;
     public Dictionary<Attributes, AttributeRange> specs = new Dictionary<Attributes, AttributeRange>();
     public string[] rawSpecs;

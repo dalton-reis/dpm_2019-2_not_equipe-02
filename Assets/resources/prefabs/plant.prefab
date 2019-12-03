@@ -265,6 +265,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plant:
     name: 
+    scientificName: 
     description: 
     sprite: 
     image: 
@@ -277,6 +278,7 @@ MonoBehaviour:
   - {fileID: 991944111700048947}
   - {fileID: 5297383591843251118}
   - {fileID: 7918620000873455864}
+  deadPlantSprite: {fileID: 21300000, guid: 7008f4592a77f1f40af62f9ea41ea64d, type: 3}
 --- !u!114 &114769576998543168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -291,6 +293,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plant:
     name: 
+    scientificName: 
     description: 
     sprite: 
     image: 

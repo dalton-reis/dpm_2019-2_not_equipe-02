@@ -34,8 +34,10 @@ public class PlantState : MonoBehaviour
         if (isDead) {
             return;
         }
+
         float lifeToUpdate = life + GetLifeUpdateValue();
         DecreasePlantAttributes();
+        
         if (lifeToUpdate > maxLife)
         {
             SetLife(maxLife);

@@ -29,6 +29,11 @@ public class PlantController : MonoBehaviour {
     private PlantState plantState;
     private HashSet<AttributeWarning> attributesNeeded = new HashSet<AttributeWarning>();
 
+    private bool isDead = false;
+
+    [SerializeField] private Sprite deadPlantSprite;
+
+
     private void Start() {
         plantState = GetComponent<PlantState>();
         gameManager = GameObject.FindObjectOfType<GameManager>();
@@ -43,8 +48,8 @@ public class PlantController : MonoBehaviour {
     private void Update() { 
         healthBar.UpdateBar(plantState.life, plantState.maxLife);
 
-        if(plantState.life <= 0)
-            GetComponent<Image>().color = new Color32(217, 38, 38, 255);
+        if(plantState.isDead)
+            ChangeSpriteToDeadPlant();
 
         SetAttributesWarning();
     }
@@ -65,7 +70,7 @@ public class PlantController : MonoBehaviour {
     }
 
     public void ShowPlantInfos() {
-        gameManager.ShowPlantInfoPanel(this.plant);
+        gameManager.ShowPlantInfoPanel(this.plant, plantState.isDead);
     }
 
     public void SetAttributesWarning() {
@@ -83,6 +88,11 @@ public class PlantController : MonoBehaviour {
                 }
             }
         }
+    }
+
+    private void ChangeSpriteToDeadPlant() {
+        GetComponent<Image>().sprite = deadPlantSprite;
+        GetComponent<Image>().color = new Color32(159, 34, 36, 255);
     }
 
     public void AddAttributeNeeded(Attributes attribute, float distance) {

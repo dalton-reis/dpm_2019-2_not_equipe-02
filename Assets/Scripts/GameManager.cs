@@ -55,8 +55,10 @@ public class GameManager : MonoBehaviour {
         plantSpawns.SetActive(show);
     }
 
-    public void ShowPlantInfoPanel(Plant plant) {
+    public void ShowPlantInfoPanel(Plant plant, bool isDead = false) {
         plantNameText.text = plant.name;
+        if(isDead)
+            plantNameText.text += " (morta)";
         plantDescriptionText.text = plant.description;
         scientificNameText.text = "(" + plant.scientificName + ")";
         plantImageSprite.sprite = Resources.Load<Sprite>(plant.image);
@@ -93,6 +95,10 @@ public class GameManager : MonoBehaviour {
     public void BackToMenu() {
         Destroy(GameObject.FindObjectOfType<BiomaController>().gameObject);
         SceneManager.LoadScene("Scenarios");
+    }
+
+    public void OpenAmbienteProfessor() {
+        Application.OpenURL("https://terrario-virtual-furb.herokuapp.com/");
     }
 
 }

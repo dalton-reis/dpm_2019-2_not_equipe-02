@@ -632,10 +632,10 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "Alunos:\n - Alex Gon\xE7alves (Ci\xEAncia da Computa\xE7\xE3o)\n - Adriner
     Andrade (Ci\xEAncia da Computa\xE7\xE3o)\n - Christian Passold (Ci\xEAncia da
-    Computa\xE7\xE3o)\n - Lara Mariot (Pedagogia)\n - Leticia (Pedagogia)\n - Luma
-    Kuhl (Ci\xEAncia da Computa\xE7\xE3o)\n - Miguel Benke (Biologia)\n - Paula Fernanda
-    (Pedagogia)\n\nProfessores:\n - Dalton Solano dos Reis (Ci\xEAncia da Computa\xE7\xE3o)\n
-    - Maur\xEDcio Capobianco Lopes (Pedagogia)"
+    Computa\xE7\xE3o)\n - Lara Mariot (Pedagogia)\n - Leticia Espindola (Pedagogia)\n
+    - Luma Kuhl (Ci\xEAncia da Computa\xE7\xE3o)\n - Miguel Benke (Biologia)\n - Paula
+    Fernanda (Pedagogia)\n\nProfessores:\n - Dalton Solano dos Reis (Ci\xEAncia da
+    Computa\xE7\xE3o)\n - Maur\xEDcio Capobianco Lopes (Pedagogia)"
 --- !u!222 &376015791
 CanvasRenderer:
   m_ObjectHideFlags: 0

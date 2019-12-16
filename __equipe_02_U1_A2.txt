@@ -1,0 +1,17 @@
+Trabalho Unidade 1: Unidade 1: A2: Escolha três aplicativos
+
+Equipe 02
+Adriner Maranho de Andrade / Alex Seródio Gonçalves / Christian Passold / Luma Kühl
+_ Slowly: APP de envio de cartas
+Muitos downloads
+Simula o tempo de espera do envio de cartas.
+Selos virtuais, comemorativos
+ORAI: treina pronúncias
+sensor de entrada, reconhecimento de pronúncias diferentes.
+Usa algumas métricas
+Me parece usar gamificação.
+O vídeo do fono do PCA.
+GREEN: mobilidade urbana (patinetes e bicicletas)
+não robam os patinete?
+Bateria dos patinetes.
+Ninguém gosta de ter um ponto de ônibus na frente do seu estabelecimento.
